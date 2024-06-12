@@ -1,6 +1,6 @@
 <!DOCTYPE php, name : index.php>
 <html>
-    <head><title>website Sahabat Mancing</title>
+    <head><title>website Sahabat Mancing update</title>
     <link rel="stylesheet" href="CSS/tampilan.css"/>
 </head>
     <body>

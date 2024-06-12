@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>website Sahabat Mancing update</title>
+    <link rel="stylesheet" href="CSS/popup.css" />
     <link rel="stylesheet" href="CSS/tampilan.css" />
   </head>
   <body>
@@ -33,5 +34,6 @@
       <?php include"page/footer.html"?>
     </div>
     <script src="js/aksi.js"></script>
+    <script src="js/render.js"></script>
   </body>
 </html>

@@ -3,8 +3,8 @@
  switch ($page){
     case 'home':include "page/home.html";break;
     case 'about':include "page/cv.html";break;
-    case 'gallery':include "page/gallery.html";break;
-    case 'contact':include "page/contact.html";break;
+    case 'berita':include "page/berita.html";break;
+    case 'belanja':include "page/belanja.html";break;
     case 'main';
     default:include"page/home.html";    
  }

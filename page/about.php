@@ -1,5 +1,5 @@
 <?php
-include('admin/page/koneksi.php');
+include_once('koneksi.php');
 ?>
 <html>
     <head>
@@ -7,16 +7,16 @@ include('admin/page/koneksi.php');
 </head>
 <body bgcolor="#ccccc">
     <?php
-    $sql     = 'select * from tbl_about';
-    $query   = mysqli_query($koneksi,$sql);
-    while($data = mysqli_fetch_array($query)); {
-        ?>
-        <center>
-            <h2><p><?php echo $data['judul']; ?></p></h2>
-    </center>
-    <p><?php echo $data['isi']; ?></p>
+        $sql     = 'SELECT * FROM tentang';
+        $query   = mysqli_query($mysqli,$sql);
+        while($data = mysqli_fetch_array($query)){
+    ?>
+            <center>
+            <h2><p><?=$data['judul']?></p></h2>
+            </center>
+            <p><?=$data['isi']?></p>
     <?php
-    }
+        }
     ?>
     </body>
     </html>

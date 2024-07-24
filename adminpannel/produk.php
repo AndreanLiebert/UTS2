@@ -2,8 +2,42 @@
 require "session.php";
 require "../koneksi.php";
 
-$queryKategori = mysqli_query($mysqli, "SELECT * FROM kategori");
-$jumlahKategori = mysqli_num_rows($queryKategori);
+if(isset($_POST['tambah'])){
+    $nama = $_POST['nama'];
+    $kategori_id = $_POST['kategori_id'];
+    $harga = $_POST['harga'];
+    $foto = $_POST['foto'];
+    $detail = $_POST['detail'];
+    $stok = $_POST['stok'];
+
+    mysqli_query($mysqli, "INSERT INTO produk (nama,kategori_id,harga,foto,detail,stok) VALUES('$nama','$kategori_id','$harga','$foto','$detail','$stok')");
+}
+if(isset($_POST['perbarui'])){
+    $id = $_POST['id'];
+    $nama = $_POST['nama'];
+    $kategori_id = $_POST['kategori_id'];
+    $harga = $_POST['harga'];
+    $foto = $_POST['foto'];
+    $detail = $_POST['detail'];
+    $stok = $_POST['stok'];
+
+    mysqli_query($mysqli, "UPDATE produk SET nama = '$nama',kategori_id = '$kategori_id',harga='$harga',foto='$foto',detail='$detail',stok='$stok' WHERE id='$id'");
+}
+if(isset($_POST['hapus'])){
+    $id = $_POST['id'];
+
+    mysqli_query($mysqli, "DELETE from produk WHERE id='$id'");
+}
+
+$queryProduk;
+if(isset($_GET['s'])){
+    $id = $_GET['s'];
+    $queryProduk = mysqli_query($mysqli, "SELECT * FROM produk WHERE kategori_id='$id'");
+}else{
+    $queryProduk = mysqli_query($mysqli, "SELECT * FROM produk");
+}
+$jumlahProduk = mysqli_num_rows($queryProduk);
+
 
 ?>
 
@@ -25,23 +59,14 @@ $jumlahKategori = mysqli_num_rows($queryKategori);
              <a href="index.php"><i class="fas fa-home"></i> Home </a>
          </li>
          <li class="breadcrumb-item active" aria-current="page">
-             <i class="fas fa-align-justify"></i> Kategori
+             <i class="fas fa-align-justify"></i> Produk
          </li>
      </ol>
      </nav>
 
       <div class="my-5 col-12 col-md-6">
-           <h3>Tambah Kategori</h3>
-           <form action="" method="post">
-            <div>
-                <label for="kategori">Kategori</label>
-                <input type="text" id="kategori" name="kategori" placeholder="input nama kategori"
-                class="form-control">
-            </div>
-            <div class="mt-3">
-                <button class="btn btn-primary" type="submit" name="simpan_kategori">Simpan</button>
-            </div>
-           </form>
+           <h3>Tambah Produk</h3>
+            <a href="produk_tambah.php"><button class="btn btn-primary">Tambah</button></a>
 
           <?php 
             if(isset($_POST['simpan_kategori'])){
@@ -79,7 +104,7 @@ $jumlahKategori = mysqli_num_rows($queryKategori);
       </div>
 
      <div class="mt-3">
-        <h2>List Kategori</h2>
+        <h2>List Produk</h2>
 
         <div class="table-responsive">
             <table class="table">
@@ -87,12 +112,16 @@ $jumlahKategori = mysqli_num_rows($queryKategori);
                     <tr>
                         <th>No.</th>
                         <th>Nama</th>
+                        <th>Harga</th>
+                        <th>Foto</th>
+                        <th>Detail</th>
+                        <th>Stok</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php 
-                      if($jumlahKategori==0){
+                      if($jumlahProduk==0){
                      ?>
                      <tr>
                         <td colspan=3 class="text-center">Data tidak tersedia</td>
@@ -101,12 +130,17 @@ $jumlahKategori = mysqli_num_rows($queryKategori);
                       }
                       else{
                         $jumlah = 1;
-                        while($data=mysqli_fetch_array($queryKategori)){
+                        while($data=mysqli_fetch_array($queryProduk)){
                         ?>
                           <tr>
                             <td><?php echo $jumlah; ?></td>
                             <td><?php echo $data['nama']; ?></td>
-                            <td><a href="produk.php?s=<?=$data['id']?>"><button>Cari</button></a></td>
+                            <td><?php echo $data['harga']; ?></td>
+                            <td><img src="../<?=$data['foto']?>" alt="" style="width:15vw"></td>
+                            <td><?php echo $data['detail']; ?></td>
+                            <td><?php echo $data['stok']; ?></td>
+                            <td><a href="produk_perbarui.php?id=<?=$data['id']?>"> <button>Perbarui</button> </a></td>
+                            <td><a href="produk_hapus.php?id=<?=$data['id']?>"> <button>Hapus</button> </a></td>
                           </tr>
                         <?php 
                         $jumlah++;   

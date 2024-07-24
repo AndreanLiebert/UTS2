@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Jul 2024 pada 15.22
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.0.30
+-- Waktu pembuatan: 24 Jul 2024 pada 17.51
+-- Versi server: 10.4.27-MariaDB
+-- Versi PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,10 +37,11 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`id`, `nama`) VALUES
-(3, 'Set pancing profesional'),
-(4, 'Set pancing pemula'),
-(8, 'Umpan'),
-(9, 'Reel');
+(1, 'Set pancing profesional'),
+(2, 'Set pancing pemula'),
+(3, 'Umpan'),
+(4, 'Reel'),
+(10, 'test');
 
 -- --------------------------------------------------------
 
@@ -50,13 +51,42 @@ INSERT INTO `kategori` (`id`, `nama`) VALUES
 
 CREATE TABLE `produk` (
   `id` int(11) NOT NULL,
-  `kategori_id` int(11) DEFAULT NULL,
-  `nama` varchar(255) DEFAULT NULL,
-  `harga` double DEFAULT NULL,
-  `foto` varchar(255) DEFAULT NULL,
-  `detail` text DEFAULT NULL,
-  `ketersediaan_stok` enum('habis','tersedia') DEFAULT 'tersedia'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `kategori_id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `harga` int(255) NOT NULL,
+  `foto` varchar(255) NOT NULL,
+  `detail` text NOT NULL,
+  `stok` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `produk`
+--
+
+INSERT INTO `produk` (`id`, `kategori_id`, `nama`, `harga`, `foto`, `detail`, `stok`) VALUES
+(1, 10, 'Reel Spinning Shimano Stella SW 2019 2020-SW4000HG', 9000000, 'gambar/bc.jpg', 'sangat kuat lah', 32),
+(2, 1, 'Reel BC Relix Nusantara Fury 101', 800000, 'gambar/bc.jpg', 'sangat hensom', 7),
+(3, 2, '1 set pancing bc(bait casting)', 200000, 'gambar/bc.jpg', 'sangat newbie', 21),
+(4, 4, 'tes', 123123, 'gambar/bc.jpg', 'sangat lah', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tentang`
+--
+
+CREATE TABLE `tentang` (
+  `judul` varchar(255) NOT NULL,
+  `isi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `tentang`
+--
+
+INSERT INTO `tentang` (`judul`, `isi`) VALUES
+('maling kundang', 'kami adalah maling kundang suka sepak ronaldo ronaldinho'),
+('siapa kami', 'kami adalah kalian');
 
 -- --------------------------------------------------------
 
@@ -91,9 +121,13 @@ ALTER TABLE `kategori`
 -- Indeks untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `nama` (`nama`),
-  ADD KEY `kategori_produk` (`kategori_id`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tentang`
+--
+ALTER TABLE `tentang`
+  ADD PRIMARY KEY (`judul`);
 
 --
 -- Indeks untuk tabel `users`
@@ -109,29 +143,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
---
-
---
--- Ketidakleluasaan untuk tabel `produk`
---
-ALTER TABLE `produk`
-  ADD CONSTRAINT `kategori_produk` FOREIGN KEY (`kategori_id`) REFERENCES `kategori` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

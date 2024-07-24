@@ -22,7 +22,7 @@
       </div>
       <div class="rightcolumn">
         <div class="card">
-          <?php include"page/about.html"?>
+          <?php include"page/about.php"?>
         </div>
 
         <div class="card er">

@@ -1,6 +1,22 @@
+<?php
+ include_once('koneksi.php');
+ ?>
+
+
+
+
+
+
+
 <html>
   <head> </head>
   <body>
+
+  <?php
+        $sql     = 'SELECT * FROM produk';
+        $query   = mysqli_query($mysqli,$sql);
+        while($data = mysqli_fetch_array($query)){
+    ?>
     <div class="card">
       <!-- home, cv, galery, contact -->
       <h1>Rekomendasi Alat Pancing Pemula</h1>

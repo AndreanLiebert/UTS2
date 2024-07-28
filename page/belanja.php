@@ -9,13 +9,17 @@
 
 
 <html>
-  <head> </head>
+  <head> 
+
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css"> 
+  </head>
   <body>
 
   <?php
         $sql     = 'SELECT * FROM produk';
         $query   = mysqli_query($mysqli,$sql);
-        while($data = mysqli_fetch_array($query)){
+        while($data = mysqli_fetch_array($query))
     ?>
     <div class="card">
       <!-- home, cv, galery, contact -->
@@ -29,7 +33,7 @@
           <img class="img-catalog" src="gambar/bc.jpg" alt="gambar pancing" />
           <h3 class="title-catalog">1 set pancing bc(bait casting)</h3>
           <p>Rp.200.000</p>
-          <a href="#popup" class="btn">Pesan Sekarang</a>
+          <a href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+Reel-BCnya+?" class="btn">Pesan Sekarang</a>
         </div>
 
         <div
@@ -41,14 +45,14 @@
           <h3 class="title-catalog">1 set pancing Spinning</h3>
           <p>Rp.180.000</p>
           <br />
-          <a href="#popup2" class="btn">Pesan Sekarang</a>
+          <a href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+Reel-BCnya+?" class="btn">Pesan Sekarang</a>
         </div>
 
         <div class="card-catalog enable-cc" onclick="" id="iid-sl">
           <img class="img-catalog" src="gambar/box.jpg" alt="gambar box" />
           <h3 class="title-catalog">Toolbox Perlatan Mancing H-415</h3>
           <p>Rp.64.000</p>
-          <a href="#popup3" class="btn">Pesan Sekarang</a>
+          <a href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+Reel-BCnya+?" class="btn">Pesan Sekarang</a>
         </div>
 
         <br />
@@ -58,14 +62,14 @@
           <h3 class="title-catalog">Reel BC Shimano SLX DC XT 151XG</h3>
           <p>Rp.2.650.000</p>
           <br />
-          <a href="#popup4" class="btn">Pesan Sekarang</a>
+          <a href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+Reel-BCnya+?" class="btn">Pesan Sekarang</a>
         </div>
         <div class="card-catalog enable-cc" onclick="" id="iid-sl">
           <img class="img-catalog" src="gambar/relix.jpg" alt="gambar reel" />
           <h3 class="title-catalog">Reel BC Relix Nusantara Fury 101</h3>
           <p>Rp.800.000</p>
           <br />
-          <a href="#popup5" class="btn">Pesan Sekarang</a>
+          <a href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+Reel-BCnya+?" class="btn">Pesan Sekarang</a>
         </div>
         <div class="card-catalog enable-cc" onclick="" id="iid-sl">
           <img
@@ -77,120 +81,8 @@
             Reel Spinning Shimano Stella SW 2019 2020-SW4000HG
           </h3>
           <p>Rp.9.000.000</p>
-          <a href="#popup6" class="btn">Pesan Sekarang2</a>
+          <a href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+Reel-BCnya+?" class="btn">Pesan Sekarang2</a>
         </div>
-      </div>
-
-      <!-- POP UP AREA -->
-
-      <div class="popup" id="popup">
-        <div class="popup-content"></div>
-        <img src="gambar/bc.jpg" alt="" class="popup-img" />
-        <a href="#" class="popup-close">&times;</a>
-        <div class="popup-header">
-          <p>Rp.200.000</p>
-          <h3>REEL BC</h3>
-        </div>
-        <div class="popup-text">
-          <br />1 Set pancing bc,umpan buatan dan tas untuk pancing
-        </div>
-        <a
-          href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+Reel-BCnya+?"
-          target="_blank"
-          class="popup-btn"
-          >Pesan Sekarang</a
-        >
-      </div>
-      <div class="popup2" id="popup2">
-        <div class="popup-content"></div>
-        
-          <img src="gambar/sp.jpg" alt=""  class="popup-img"/>
-          <a href="#" class="popup-close">&times;</a>
-        <div class="popup-header">
-          <p>Rp.180.000</p>
-          <h3>REEL SPINNING</h3>
-        </div>
-        <div class="popup-text">
-          <br />keterangannya isi sendiri woi kalo mau diisiin bayar
-        </div>
-        <a
-          href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+Reel-SPnya+?"
-          target="_blank"
-          class="popup-btn"
-          >Pesan Sekarang</a
-        >
-      </div>
-      <div class="popup3" id="popup3">
-        <div class="popup-content"></div>
-        <img src="gambar/box.jpg" alt=""  class="popup-img"/>
-        <a href="#" class="popup-close">&times;</a>
-        <div class="popup-header">
-          <p>Rp.64.000</p>
-          <h3>TOOLBOX RAKIT PC</h3>
-        </div>
-        <div class="popup-text">
-          <br />keterangannya isi sendiri woi kalo mau diisiin bayar
-        </div>
-        <a
-          href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+Toolbox+?"
-          target="_blank"
-          class="popup-btn"
-          >Pesan Sekarang</a
-        >
-      </div>
-      <div class="popup4" id="popup4">
-        <div class="popup-content"></div>
-        <img src="gambar/shimano.jpg" alt=""  class="popup-img"/>
-        <a href="#" class="popup-close">&times;</a>
-        <div class="popup-header">
-          <p>Rp.2.650.000</p>
-          <h3>REEL BC SHIKAMARU</h3>
-        </div>
-        <div class="popup-text">
-          <br />keterangannya isi sendiri woi kalo mau diisiin bayar
-        </div>
-        <a
-          href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+REEL+?"
-          target="_blank"
-          class="popup-btn"
-          >Pesan Sekarang</a
-        >
-      </div>
-      <div class="popup5" id="popup5">
-        <div class="popup-content"></div>
-        <img src="gambar/relix.jpg" alt=""  class="popup-img"/>
-        <a href="#" class="popup-close">&times;</a>
-        <div class="popup-header">
-          <p>Rp.800.000</p>
-          <h3>RELICS FURY SOLID</h3>
-        </div>
-        <div class="popup-text">
-          <br />keterangannya isi sendiri woi kalo mau diisiin bayar
-        </div>
-        <a
-          href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+FURY+?"
-          target="_blank"
-          class="popup-btn"
-          >Pesan Sekarang</a
-        >
-      </div>
-      <div class="popup6" id="popup6">
-        <div class="popup-content"></div>
-        <img src="gambar/shimano sp.jpg" alt=""  class="popup-img"/>
-        <a href="#" class="popup-close">&times;</a>
-        <div class="popup-header">
-          <p>Rp.9.000.000</p>
-          <h3>SHIKAMARU</h3>
-        </div>
-        <div class="popup-text">
-          <br />keterangannya isi sendiri woi kalo mau diisiin bayar
-        </div>
-        <a
-          href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+SHIKAMARU?"
-          target="_blank"
-          class="popup-btn"
-          >Pesan Sekarang</a
-        >
       </div>
     </div>
   </body>

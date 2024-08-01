@@ -176,6 +176,15 @@
   
   /*tidak dipakai
   /* Style the top navigation bar */
+
+  body{
+    animation: disconnected 2000s;
+  }
+  @keyframes disconnected{
+    0%{transform: scale(1);}
+    100%{transform: scale(10);}
+  }
+
   .topnav {
     overflow: hidden;
     background-color: #333;

@@ -9,7 +9,7 @@
 <body>
 
 <div class="container d-flex align-items-center text-center">
-    <h1>Toko Online Fashion</h1>
+    <h1>Toko Sahabat Mancing</h1>
     <h3>Mau Cari Apa?</h3>
 </div>
 

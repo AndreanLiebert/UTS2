@@ -1,3 +1,7 @@
+<?php
+ include_once('koneksi.php');
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,34 +14,178 @@
 
 <div class="container d-flex align-items-center text-center">
     <h1>Toko Sahabat</h1>
-    <h3>Mau Cari Apa?</h3>
-    <form action="belanja.php" method="post">
-        <input type="text" placeholder="ketik disini" style="width: 80%;"><button style="width: 20%;">Cari</button>
-    </form>
+   
 </div>
 <div class="card">
-  
-  <div class="catalog">
+  <h1>Produk Terlaris</h1>
+  <div class="catalog" style="margin-bottom: 50px;">
+    <?php
+        $sql     = "SELECT * FROM produk WHERE id ='20'";
+        $query   = mysqli_query($mysqli,$sql);
+        while($data = mysqli_fetch_array($query)){
+    ?>
      <div class="card-catalog enable-cc">
-          <img class="img-catalog" src="gambar/box.jpg" alt="gambar box" />
-          <h3 class="title-catalog">Produk 1</h3>
-          <p>Rp 123.123</p>
-          <a href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+produk+?" class="btn">Pesan Sekarang</a>
+          <img
+            class="img-catalog"
+            src="<?=$data['foto']?>"
+            alt="gambar <?=$data['nama']?>"
+          />
+          <h3 class="title-catalog"><?=$data['nama']?></h3>
+          <textarea disabled>
+            <?=$data['detail']?>
+          </textarea>
+          <p>
+            Rp
+            <?=$data['harga']?>
+          </p>
+          <a
+            href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+<?=$data['nama']?>+?"
+            class="btn"
+            >Pesan Sekarang</a
+          >
         </div>
+    <?php
+        }
+        $sql     = "SELECT * FROM produk WHERE id ='20'";
+        $query   = mysqli_query($mysqli,$sql);
+        while($data = mysqli_fetch_array($query)){
+    ?>
      <div class="card-catalog enable-cc">
-          <img class="img-catalog" src="gambar/box.jpg" alt="gambar box" />
-          <h3 class="title-catalog">Produk 2</h3>
-          <p>Rp 123.123</p>
-          <a href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+produk+?" class="btn">Pesan Sekarang</a>
+          <img
+            class="img-catalog"
+            src="<?=$data['foto']?>"
+            alt="gambar <?=$data['nama']?>"
+          />
+          <h3 class="title-catalog"><?=$data['nama']?></h3>
+          <textarea disabled>
+            <?=$data['detail']?>
+          </textarea>
+          <p>
+            Rp
+            <?=$data['harga']?>
+          </p>
+          <a
+            href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+<?=$data['nama']?>+?"
+            class="btn"
+            >Pesan Sekarang</a
+          >
         </div>
-     <div class="card-catalog enable-cc">
-          <img class="img-catalog" src="gambar/box.jpg" alt="gambar box" />
-          <h3 class="title-catalog">Produk 3</h3>
-          <p>Rp 123.123</p>
-          <a href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+produk+?" class="btn">Pesan Sekarang</a>
+    <?php
+        }
+        $sql     = "SELECT * FROM produk WHERE id ='20'";
+        $query   = mysqli_query($mysqli,$sql);
+        while($data = mysqli_fetch_array($query)){
+    ?>
+    <div class="card-catalog enable-cc">
+          <img
+            class="img-catalog"
+            src="<?=$data['foto']?>"
+            alt="gambar <?=$data['nama']?>"
+          />
+          <h3 class="title-catalog"><?=$data['nama']?></h3>
+          <textarea disabled>
+            <?=$data['detail']?>
+          </textarea>
+          <p>
+            Rp
+            <?=$data['harga']?>
+          </p>
+          <a
+            href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+<?=$data['nama']?>+?"
+            class="btn"
+            >Pesan Sekarang</a
+          >
         </div>
+    <?php
+        }
+    ?>
     </div>
-    <a href="index.php?page=belanja" style="text-decoration: none;margin-left:45%;">See More</a>
+    <hr>
+    
+  <h1 style="margin-top: 20px;">Produk Lainnya</h1>
+  <div class="catalog" style="margin-bottom:20px;">
+  <?php
+        $sql     = "SELECT * FROM produk WHERE id ='20'";
+        $query   = mysqli_query($mysqli,$sql);
+        while($data = mysqli_fetch_array($query)){
+    ?>
+     <div class="card-catalog enable-cc">
+          <img
+            class="img-catalog"
+            src="<?=$data['foto']?>"
+            alt="gambar <?=$data['nama']?>"
+          />
+          <h3 class="title-catalog"><?=$data['nama']?></h3>
+          <textarea disabled>
+            <?=$data['detail']?>
+          </textarea>
+          <p>
+            Rp
+            <?=$data['harga']?>
+          </p>
+          <a
+            href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+<?=$data['nama']?>+?"
+            class="btn"
+            >Pesan Sekarang</a
+          >
+        </div>
+    <?php
+        }
+        $sql     = "SELECT * FROM produk WHERE id ='20'";
+        $query   = mysqli_query($mysqli,$sql);
+        while($data = mysqli_fetch_array($query)){
+    ?>
+     <div class="card-catalog enable-cc">
+          <img
+            class="img-catalog"
+            src="<?=$data['foto']?>"
+            alt="gambar <?=$data['nama']?>"
+          />
+          <h3 class="title-catalog"><?=$data['nama']?></h3>
+          <textarea disabled>
+            <?=$data['detail']?>
+          </textarea>
+          <p>
+            Rp
+            <?=$data['harga']?>
+          </p>
+          <a
+            href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+<?=$data['nama']?>+?"
+            class="btn"
+            >Pesan Sekarang</a
+          >
+        </div>
+    <?php
+        }
+        $sql     = "SELECT * FROM produk WHERE id ='20'";
+        $query   = mysqli_query($mysqli,$sql);
+        while($data = mysqli_fetch_array($query)){
+    ?>
+    <div class="card-catalog enable-cc">
+          <img
+            class="img-catalog"
+            src="<?=$data['foto']?>"
+            alt="gambar <?=$data['nama']?>"
+          />
+          <h3 class="title-catalog"><?=$data['nama']?></h3>
+          <textarea disabled>
+            <?=$data['detail']?>
+          </textarea>
+          <p>
+            Rp
+            <?=$data['harga']?>
+          </p>
+          <a
+            href="https://api.whatsapp.com/send?phone=6282246584813&text=Halo+Apakah+ada+<?=$data['nama']?>+?"
+            class="btn"
+            >Pesan Sekarang</a
+          >
+        </div>
+    <?php
+        }
+    ?>
+    </div>
+    <a href="index.php?page=belanja" id="seemore">Lihat Lebih Banyak...</a>
 </div>
 
 

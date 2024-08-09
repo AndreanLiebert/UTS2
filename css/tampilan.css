@@ -231,141 +231,6 @@
   .footer img{
     width: 100px;
   }
-  /**
-  Tampilan Jualan
-
-*/
-.catalog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .card-catalog {
-    background-color: hsl(218, 43%, 87%);
-    box-shadow: 1px 2px 3px black;
-    text-align: center;
-    width: 30%;
-    padding-top: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: 0.25s;
-  }
-  .img-catalog {
-    width: 110px;
-    box-shadow: 1px 2px 5px black;
-  }
-  
-  .enable-cc:hover, .enable-cc:active {
-    transform: scale(1.05);
-  }
-/**
-  Tampilan Jualan
-
-*/
-.catalog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .card-catalog {
-    background-color: hsl(218, 43%, 87%);
-    box-shadow: 1px 2px 3px black;
-    text-align: center;
-    width: 30%;
-    padding-top: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: 0.25s;
-  }
-  .img-catalog {
-    width: 110px;
-    box-shadow: 1px 2px 5px black;
-  }
-  
-  .enable-cc:hover, .enable-cc:active {
-    transform: scale(1.05);
-  }
-/**
-  Tampilan Jualan
-
-*/
-.catalog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .card-catalog {
-    background-color: hsl(218, 43%, 87%);
-    box-shadow: 1px 2px 3px black;
-    text-align: center;
-    width: 30%;
-    padding-top: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: 0.25s;
-  }
-  .img-catalog {
-    width: 110px;
-    box-shadow: 1px 2px 5px black;
-  }
-  
-  .enable-cc:hover, .enable-cc:active {
-    transform: scale(1.05);
-  }
-/**
-  Tampilan Jualan
-
-*/
-.catalog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .card-catalog {
-    background-color: hsl(218, 43%, 87%);
-    box-shadow: 1px 2px 3px black;
-    text-align: center;
-    width: 30%;
-    padding-top: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: 0.25s;
-  }
-  .img-catalog {
-    width: 110px;
-    box-shadow: 1px 2px 5px black;
-  }
-  
-  .enable-cc:hover, .enable-cc:active {
-    transform: scale(1.05);
-  }
-/**
-  Tampilan Jualan
-
-*/
-.catalog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .card-catalog {
-    background-color: hsl(218, 43%, 87%);
-    box-shadow: 1px 2px 3px black;
-    text-align: center;
-    width: 30%;
-    padding-top: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: 0.25s;
-  }
-  .img-catalog {
-    width: 110px;
-    box-shadow: 1px 2px 5px black;
-  }
-  
-  .enable-cc:hover, .enable-cc:active {
-    transform: scale(1.05);
-  }
 /**
   Tampilan Jualan
 
@@ -373,6 +238,7 @@
 .catalog {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
 }
 .card-catalog {
@@ -389,6 +255,29 @@
   width: 110px;
   box-shadow: 1px 2px 5px black;
 }
+.card-catalog textarea{
+  min-width: 90%;
+  max-width: 90%;
+  min-height: 10%;
+  background-color: hsl(218, 43%, 97%);
+}
+
+#seemore{
+  text-decoration: none;
+  margin-left:45%;
+  animation: andregay 1s infinite;
+  cursor:crosshair; 
+}
+@keyframes andregay {
+  0%{color: red; background-color: white;}
+  20%{color: green;}
+  40%{color: blue;}
+  50%{color: yellow; background-color: black;}
+  70%{color: violet;}
+  90%{color: purple;}
+  100%{color: red; background-color: white;}
+}
+
 
 .enable-cc:hover, .enable-cc:active {
   transform: scale(1.05);

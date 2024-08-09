@@ -9,7 +9,7 @@
 <body>
 
 <div class="container d-flex align-items-center text-center">
-    <h1>Toko Mancing Perkoro</h1>
+    <h1>Toko Sahabat</h1>
     <h3>Mau Cari Apa?</h3>
     <form action="belanja.php" method="post">
         <input type="text" placeholder="ketik disini" style="width: 80%;"><button style="width: 20%;">Cari</button>

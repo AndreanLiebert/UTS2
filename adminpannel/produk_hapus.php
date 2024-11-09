@@ -58,8 +58,6 @@ require "../koneksi.php";
         <label>Detail:</label><br>
         <textarea name="detail" disabled><?=$data['detail']?></textarea><br>
         
-        <label>Stok:</label><br>
-        <input type="number" name="stok" value="<?=$data['stok']?>" disabled><br>
                 <?php
                 }?>
         <h1>Yakin hapus data diatas?</h1>

@@ -50,8 +50,6 @@ require "../koneksi.php";
         <label>Detail:</label><br>
         <textarea name="detail"></textarea><br>
         
-        <label>Stok:</label><br>
-        <input type="number" name="stok"><br>
 
         <input type="submit" name="tambah">
      </form>  

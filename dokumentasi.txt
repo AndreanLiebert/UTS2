@@ -2,3 +2,7 @@
 rapihin awalan
 yg di folder old jangan diapus, itu tempat semua folder sma file2 sebelum diubah ke projek e bisnis
 yg index.html jangan diotak atik, itu buat ngetes sblm nyentuh php
+
+09/11/2024
+menghapus file bootstrap,fontawesome dan gambar yang tidak diperlukan
+sama menghapus stok soalnya stoknya ga usah dibikin di harusnya bikin total item aja

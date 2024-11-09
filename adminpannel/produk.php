@@ -115,7 +115,7 @@ $jumlahProduk = mysqli_num_rows($queryProduk);
                         <th>Harga</th>
                         <th>Foto</th>
                         <th>Detail</th>
-                        <th>Stok</th>
+                       
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -138,7 +138,6 @@ $jumlahProduk = mysqli_num_rows($queryProduk);
                             <td><?php echo $data['harga']; ?></td>
                             <td><img src="../<?=$data['foto']?>" alt="" style="width:15vw"></td>
                             <td><?php echo $data['detail']; ?></td>
-                            <td><?php echo $data['stok']; ?></td>
                             <td><a href="produk_perbarui.php?id=<?=$data['id']?>"> <button>Perbarui</button> </a></td>
                             <td><a href="produk_hapus.php?id=<?=$data['id']?>"> <button>Hapus</button> </a></td>
                           </tr>

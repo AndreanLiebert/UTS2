@@ -58,8 +58,6 @@ require "../koneksi.php";
         <label>Detail:</label><br>
         <textarea name="detail"><?=$data['detail']?></textarea><br>
         
-        <label>Stok:</label><br>
-        <input type="number" name="stok" value="<?=$data['stok']?>"><br>
                 <?php
                 }?>
         <input type="submit" name="perbarui">

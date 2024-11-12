@@ -6,3 +6,12 @@ yg index.html jangan diotak atik, itu buat ngetes sblm nyentuh php
 09/11/2024
 menghapus file bootstrap,fontawesome dan gambar yang tidak diperlukan
 sama menghapus stok soalnya stoknya ga usah dibikin di harusnya bikin total item aja
+
+12/11/24 9.53
+lanjut rapihin depan, mulai masuk ke katalog
+
+warna pilihan (katanya suka biru) dari atas :
+#DFF2EB
+#B9E5E8
+#7AB2D3
+#4A628A

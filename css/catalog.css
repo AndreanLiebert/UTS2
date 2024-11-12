@@ -1,32 +1,30 @@
-
 /**
   Tampilan Jualan
 
 */
 .catalog {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .card-catalog {
-    background-color: hsl(218, 43%, 87%);
-    box-shadow: 1px 2px 3px black;
-    text-align: center;
-    width: 30%;
-    padding-top: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: 0.25s;
-  }
-  .img-catalog {
-    width: 110px;
-    box-shadow: 1px 2px 5px black;
-  }
-  .card-catalog textarea{
-    min-width: 90%;
-    max-width: 90%;
-    min-height: 10%;
-    background-color: hsl(218, 43%, 97%);
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 5%;
+}
+.card-catalog {
+  max-width: 150px;
+  background-color:#DFF2EB;
+  box-shadow: 0px 1px 4px black;
+  text-align: center;
+  width: 30%;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.25s;
+  border-radius: 5px;
+  color: hsl(218, 30%, 42%);
+}
+.card-catalog:hover{
+  color: #DFF2EB;
+  background-color:#4b638b;
+  scale: 1.05;
+}
+.img-catalog {
+  width: 100%;
+}

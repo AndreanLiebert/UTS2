@@ -22,3 +22,4 @@ grrr
 
 
 12/11/2024 16.38
+test gambar tapi warna teks sama logo belum matching karena canvae erors

@@ -1,0 +1,40 @@
+/*
+#DFF2EB #A64D79 
+#B9E5E8 #6A1E55
+#7AB2D3 #3B1C32
+#4A628A #1A1A1D
+*/
+
+h1{
+    color: #1A1A1D;
+}
+body{
+    background-color: #3B1C32;
+}
+#navbar{
+    background-color: #1A1A1D;
+}
+.card{
+    background-color: #6A1E55;
+}
+.footer{
+    background-color: #1A1A1D;
+}
+
+.product-userInput,.product-item,.product-payment{
+    background-color: #3B1C32;
+}
+.number{
+    background-color: #1A1A1D;
+    color: #A64D79 ;
+}
+
+h3{
+    color: #1A1A1D;
+}
+.item-top{
+    background-color: #A64D79;
+}
+.item-bot{
+    background-color: #6A1E55;
+}

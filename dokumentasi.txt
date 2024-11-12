@@ -23,3 +23,12 @@ grrr
 
 12/11/2024 16.38
 test gambar tapi warna teks sama logo belum matching karena canvae erors
+
+12/11/2024 21:36
+keliatannya warnanya butek ya, nyoba make warna pilihan ku
+#A64D79
+#6A1E55
+#3B1C32
+#1A1A1D
+kykny sama aja,,
+lanjut bagian produk + pembayaran

@@ -1,16 +1,15 @@
-.product-userInput,.product-item,.product-payment{
+.product-userInput,.product-item,.product-payment,.product-buy{
     background-color: #7AB2D3;
     min-height: 20vh;
     border-radius: 10px;
-    
+    box-shadow: 0 0 3px black;
 }
 .product-content{
     padding: 0 10px 10px 10px;
 }
 
-
-
 .number{
+    box-shadow: 0 0 3px black;
     font-size: 2rem;
     padding: 5px 15px;
     background-color: #4A628A;
@@ -49,7 +48,7 @@ input{
 .item-card{
     /* background-color: red; */
     text-align: center;
-    max-width: 30%;
+    max-width: 20%;
     display: flex;
     flex-direction: column;
     /* padding: 3px; */
@@ -77,6 +76,101 @@ input{
     border-radius: 0 0 10px 10px;
     text-align: right;
     background-color: #B9E5E8;
-    color: green;
-    padding-bottom: 10px;
+    color: purple;
+    padding: 10px 3px 10px 0;
+}
+.item-choosen{
+    border: 4px solid;
+    border-color: purple;
+}
+
+.payment-card{
+    background-color: #DFF2EB;
+    min-height: 10vh;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3px 10px 3px 10px;
+    margin-bottom: 10px;
+}
+.payment-left img{
+    max-width: 20%;
+}
+.payment-left p{
+    margin: 0;
+}
+.payment-right{
+    justify-content: right;
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+    color: purple;
+    width: 40%;
+}
+.payment-choosen{
+    border: 4px solid;
+    border-color: purple;
+}
+
+.rule{
+    margin-top: 0;
+}
+.buy{
+    background-color: #DFF2EB;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px black;
+}
+.dot{
+    background-color: red;
+    width: 10px;
+    padding: 0 20px 0 0;
+    margin-right: 5px;
+    border-radius: 100%;
+}
+.buy-detail{
+    display: flex;
+    flex-direction: row;
+}
+.buy-left{
+    width: 50%;
+}
+.buy-right{
+    padding-right: 5%;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.buy-left p{
+    margin: 0;
+    padding: 3px 6px;
+}
+#price{
+    color: purple;
+    font-size: 1.2rem;
+}
+#detail{
+    font-size: 1rem;
+}
+.info{
+    font-size: 0.9rem;
+}
+.buy-right button{
+    background-color: purple;
+    color: #DFF2EB;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px black;
+}
+.buy-right button:hover{
+    background-color: hsl(300, 100%, 35%);
+    cursor: pointer;
+}
+.buy-right button:active{
+    background-color: hsl(300, 100%, 45%);
 }

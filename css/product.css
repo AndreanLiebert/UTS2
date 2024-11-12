@@ -1,0 +1,82 @@
+.product-userInput,.product-item,.product-payment{
+    background-color: #7AB2D3;
+    min-height: 20vh;
+    border-radius: 10px;
+    
+}
+.product-content{
+    padding: 0 10px 10px 10px;
+}
+
+
+
+.number{
+    font-size: 2rem;
+    padding: 5px 15px;
+    background-color: #4A628A;
+    color: #DFF2EB;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+h3{
+    color:hsl(218, 30%, 32%);
+    margin-bottom: 10px;
+    position: relative;
+    left: -10px;
+    top: -10px;
+    font-size: larger;
+}
+
+input{
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.input-info{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.product-item .product-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
+.item-card{
+    /* background-color: red; */
+    text-align: center;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 3px; */
+    border-radius: 10px;
+    box-shadow: 0 1px 3px black;
+    margin-bottom: 10px;
+}
+.item-card:hover{
+    cursor: pointer;
+}
+
+.item-top{
+    padding-top: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: #DFF2EB;
+}
+.item-top h4{
+    margin: 0;
+}
+.item-top img{
+    width: 100%;
+    /* background-color: red; */
+}
+.item-bot{
+    border-radius: 0 0 10px 10px;
+    text-align: right;
+    background-color: #B9E5E8;
+    color: green;
+    padding-bottom: 10px;
+}

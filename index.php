@@ -8,14 +8,14 @@
   <body>
     
     <div class="header">
-      <img src="gambar/header.png" width="100%" height="230px" />
+      <img src="gambare.png" width="100%" height="230px" />
     </div>
 
     <div id="navbar">
       <a href="index.php?page=home">Home</a>
     </div>
     
-    <marquee>Selamat datang di Sahabat Mancing,anda sopan kami Mancing</marquee>
+    <marquee>Selamat datang di TopupZone,Tempat topup favorit semua orang</marquee>
 
     <div class="row">
       

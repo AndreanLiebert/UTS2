@@ -35,3 +35,6 @@ lanjut bagian produk + pembayaran
 
 13/11/2024 09:17
 mulai bikin database
+
+13/11/2024 17:24
+cuman ganti border gatau kenapa xampp gua erors

@@ -3,9 +3,9 @@
   <head>
     <title>TopUp Zone</title>
     <!-- <link rel="stylesheet" href="CSS/product.css" /> -->
-    <link rel="stylesheet" href="CSS/catalog.css" />
-    <link rel="stylesheet" href="CSS/product.css" />
-    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="assets/CSS/catalog.css" />
+    <link rel="stylesheet" href="assets/CSS/product.css" />
+    <link rel="stylesheet" href="assets/CSS/global.css" />
   </head> 
   <body>
     
@@ -63,8 +63,8 @@
       <p>Copyleft &copy;TopupZone 2024</p>
     </div>
 
-    <script src="js/aksi.js"></script>
-    <script src="js/global.js"></script>
+    <script src="assets/JS/aksi.js"></script>
+    <script src="assets/JS/global.js"></script>
   </body>
 </html>
  

@@ -24,12 +24,14 @@ if(isset($_GET['c'])){
       $query   = mysqli_query($mysqli,$sql);
       while($data = mysqli_fetch_array($query)){
       ?>
-        <div class="item-card" onclick="changeItem(this,<?=$data['harga_produk']?>)">
+        <div class="item-card" onclick="changeItem(this)">
+          <input type="text" value="<?=$data['id_produk']?>" id="item-id" hidden>
+          <input type="text" value="<?=$data['harga_produk']?>" id="item-price" hidden>
           <div class="item-top">
-            <h4><?=$data['jumlah_produk']?> <?=$data['nama_produk']?></h4>
+            <h4 id="item-name"><?=$data['jumlah_produk']?> <?=$data['nama_produk']?></h4>
             <img src="<?=$data['gambar_produk']?>" />
           </div>
-          <div class="item-bot">Rp. <?=$data['harga_produk']?></div>
+          <div class="item-bot"><?=$data['harga_produk']?></div>
         </div>
       <?php
       }
@@ -47,10 +49,11 @@ if(isset($_GET['c'])){
       while($data = mysqli_fetch_array($query)){
       ?>
         <div class="payment-card" onclick="changePayment(this)">
-          <input type="text" id="tax" value="<?=$data['pajak_pembayaran']?>" hidden>
+          <input type="text" id="payment-tax" value="<?=$data['pajak_pembayaran']?>" hidden>
+          <input type="text" id="payment-id" value="<?=$data['id_pembayaran']?>" hidden>
           <div class="payment-left">
             <img src="<?=$data['gambar_pembayaran']?>" alt="" />
-            <p><?=$data['nama_pembayaran']?></p>
+            <p id="payment-name"><?=$data['nama_pembayaran']?></p>
           </div>
           <div class="payment-right">
             <p id="price"></p>
@@ -62,7 +65,7 @@ if(isset($_GET['c'])){
       </div>
     </div>
 
-    <div class="product-buy">
+    <div class="product-buy" style="display: none;">
       <h3><span class="number">4</span>Beli</h3>
       <div class="product-content">
         <div class="buy">
@@ -73,19 +76,19 @@ if(isset($_GET['c'])){
 
           <div class="buy-detail">
             <div class="buy-left">
-              <p id="detail">5 Diamonds <span class="dot"></span> Shopee Pay</p>
-              <p id="price">Rp. 99.999.999</p>
+              <p><span id="detail-item"></span><span class="dot"></span><span id="detail-payment"></span></p>
+              <p id="detail-price"></p>
               <p class="info">*Sudah termasuk pajak</p>
             </div>
             <div class="buy-right">
-              <button>Beli Sekarang</button>
+              <button id="buy-button">Beli Sekarang</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <script src="js/product.js"></script>
+  <script src="assets/JS/product.js"></script>
 <?php
 }else{
   include "page/catalog.php";

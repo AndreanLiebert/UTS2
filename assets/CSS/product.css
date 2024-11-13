@@ -127,7 +127,7 @@ input{
     background-color: red;
     width: 10px;
     padding: 0 20px 0 0;
-    margin-right: 5px;
+    margin: 0 5px;
     border-radius: 100%;
 }
 .buy-detail{
@@ -135,11 +135,11 @@ input{
     flex-direction: row;
 }
 .buy-left{
-    width: 50%;
+    width: 60%;
 }
 .buy-right{
     padding-right: 5%;
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -148,12 +148,13 @@ input{
     margin: 0;
     padding: 3px 6px;
 }
-#price{
+#detail-price{
     color: purple;
     font-size: 1.2rem;
 }
-#detail{
+.detail{
     font-size: 1rem;
+    /* text-align: center; */
 }
 .info{
     font-size: 0.9rem;

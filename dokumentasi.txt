@@ -38,3 +38,7 @@ mulai bikin database
 
 13/11/2024 17:24
 cuman ganti border gatau kenapa xampp gua erors
+
+13/11/2024 19:34
+fix angka biar 3 digit ada titik, sama rapihin produk biar sinkron setiap bagian
+mana nih database barunya...

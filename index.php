@@ -1,10 +1,12 @@
 <!DOCTYPE php, name : index.php>
 <html>
   <head>
-    <title>website Sahabat Mancing update</title>
-    <link rel="stylesheet" href="CSS/popup.css" />
-    <link rel="stylesheet" href="CSS/tampilan.css" />
-  </head>
+    <title>TopUp Zone</title>
+    <!-- <link rel="stylesheet" href="CSS/product.css" /> -->
+    <link rel="stylesheet" href="CSS/catalog.css" />
+    <link rel="stylesheet" href="CSS/product.css" />
+    <link rel="stylesheet" href="CSS/global.css" />
+  </head> 
   <body>
     
     <div class="header">
@@ -12,7 +14,8 @@
     </div>
 
     <div id="navbar">
-      <a href="index.php?page=home">Home</a>
+      <a href="index.php?page=home">Topup Zone</a>
+      <a href="index.php?page=home">Akun</a>
     </div>
     
     <marquee>Selamat datang di TopupZone,Tempat topup favorit semua orang</marquee>
@@ -27,22 +30,41 @@
 
       <div class="rightcolumn">
         <div class="card">
-          <?php include"page/about.php"?>
+          <h2>aboutxx</h2>
+          <p>data aboutxx</p>
         </div>
 
         <div class="card er">
-          <?php include"page/sosialmedia.html"?>
+          <h2>SOSIAL MEDIA</h2>
+          <p>
+            Join sosial media Sahabat Mancing untuk saling berinteraksi sesama
+            angler.
+          </p>
+          <div class="sosmed">
+            <a
+              href="https://chat.whatsapp.com/JmlB87cH1Co3bkqXyCUOuy"
+              target="_blank"
+              ><img src="gambar/wa.png" alt="" />Whatsapp</a
+            >
+          </div>
+          <div class="sosmed">
+            <a
+              href="https://www.facebook.com/groups/1491049075102696/"
+              target="_blank"
+              ><img src="gambar/fb.png" alt="" />Facebook</a
+            >
+          </div>
         </div>
       </div>
 
     </div>
 
     <div class="footer">
-      <?php include"page/footer.html"?>
+      <p>Copyleft &copy;TopupZone 2024</p>
     </div>
 
     <script src="js/aksi.js"></script>
-    <script src="js/render.js"></script>
+    <script src="js/global.js"></script>
   </body>
 </html>
  

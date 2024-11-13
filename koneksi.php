@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost","root","","db_tokopancing");
+$mysqli = new mysqli("localhost","root","","db_topupzone");
 
 // Check connection
 if ($mysqli -> connect_errno) {

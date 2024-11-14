@@ -46,6 +46,9 @@ mana nih database barunya...
 13/11/2024 21:08
 bikin tampilan konfirmasi pembelian
 
+13/11/2024 21.31
+nambahin foto-foto game
+
 14/11/2024 15:58
 lanjutin konfirm pembelian,
 kyknya tbl_game perlu field tipe inputan dah

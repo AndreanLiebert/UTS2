@@ -42,3 +42,11 @@ cuman ganti border gatau kenapa xampp gua erors
 13/11/2024 19:34
 fix angka biar 3 digit ada titik, sama rapihin produk biar sinkron setiap bagian
 mana nih database barunya...
+
+13/11/2024 21:08
+bikin tampilan konfirmasi pembelian
+
+14/11/2024 15:58
+lanjutin konfirm pembelian,
+kyknya tbl_game perlu field tipe inputan dah
+kyk ff kan Player ID, trus ada game yg pake usernamenya, kira2 nama yg enak apa buat fieldnya?

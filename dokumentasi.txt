@@ -52,4 +52,8 @@ nambahin foto-foto game
 14/11/2024 15:58
 lanjutin konfirm pembelian,
 kyknya tbl_game perlu field tipe inputan dah
-kyk ff kan Player ID, trus ada game yg pake usernamenya, kira2 nama yg enak apa buat fieldnya?
+kyk ff kan Player ID, trus ada game yg pake usernamenya, kira2 nama yg enak apa buat fieldnya? bukannya setiap game
+klo mau topup pake id ya? mana ada yang make usernamenya
+
+15/11/2024 16:04
+nambahin gambar produk,pembayarn,dan game serta menambahkan databse buat dm ml dan meperbaharui folder db_topupzone

@@ -1,0 +1,11 @@
+status_game kode (sementara):
+0 = unready
+1 = ready
+
+foto buat katalog:
+-ukuran 255x255
+nama= kat-nama.jpg
+
+foto buat produk:
+-ukuran= 150x150
+-nama= pdc-nama.png

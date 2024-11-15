@@ -57,3 +57,8 @@ klo mau topup pake id ya? mana ada yang make usernamenya
 
 15/11/2024 16:04
 nambahin gambar produk,pembayarn,dan game serta menambahkan databse buat dm ml dan meperbaharui folder db_topupzone
+
+15/11/2024 20:41
+remake foto2 sama rewrite database, dibilang samain sama yg udah ada, malah asal nyomot gugel
+nambain field status_game di tbl_game, kode2 ditulis di aturan.txt
+ngerubah pajak di tbl pembayaran jadi fee/biaya

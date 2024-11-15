@@ -1,5 +1,5 @@
 let item = {name:"",id:null,price:null};
-let payment = {name:"",id:null,tax:null};
+let payment = {name:"",id:null,fee:null};
 let prevISpotlight=null,ISpotight=null;
 let prevPSpotlight=null,PSpotight=null;
 let allPayment = document.querySelectorAll(".payment-card");
@@ -13,7 +13,7 @@ function changeItem(comp){
     item.name = comp.querySelector("#item-name").textContent;
     item.price = parseInt(comp.querySelector("#item-price").value);
     for(let i=0;i<allPayment.length;i++){
-        allPayment[i].querySelector("#price").textContent = `Rp. ${formatNumber(item.price+(item.price*allPayment[i].querySelector("#payment-tax").value))}`;
+        allPayment[i].querySelector("#price").textContent = `Rp. ${formatNumber(item.price+parseInt(allPayment[i].querySelector("#payment-fee").value))}`;
     }
     if(PSpotight==null) changePayment(allPayment[0]);
     else changeBuy();
@@ -25,14 +25,15 @@ function changePayment(comp){
     PSpotight.classList.add("payment-choosen");
     payment.name = comp.querySelector("#payment-name").textContent;
     payment.id = comp.querySelector("#payment-id").value;
-    payment.tax = parseFloat(comp.querySelector("#payment-tax").value);
+    payment.fee = parseInt(comp.querySelector("#payment-fee").value);
+    if(item.id==null) changeItem(allItem[0]);
     changeBuy();
 }
 function changeBuy(){
     document.querySelector(".product-buy").style.display="block";
     document.querySelector("#detail-item").textContent = item.name;
     document.querySelector("#detail-payment").textContent = payment.name;
-    document.querySelector("#detail-price").textContent = `Rp. ${formatNumber(item.price+(item.price*payment.tax))}`;
+    document.querySelector("#detail-price").textContent = `Rp. ${formatNumber(item.price+payment.fee)}`;
 }
 function formatNumber(num){
     if(num.toString().length<4) return num;

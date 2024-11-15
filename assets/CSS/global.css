@@ -104,10 +104,6 @@ body::-webkit-scrollbar{
     width: 100%;
     padding: 0;
   }
-
-  .item-card{
-    max-width: 30%;
-  }
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */

@@ -49,7 +49,7 @@ if(isset($_GET['c'])){
       while($data = mysqli_fetch_array($query)){
       ?>
         <div class="payment-card" onclick="changePayment(this)">
-          <input type="text" id="payment-tax" value="<?=$data['pajak_pembayaran']?>" hidden>
+          <input type="text" id="payment-fee" value="<?=$data['biaya_pembayaran']?>" hidden>
           <input type="text" id="payment-id" value="<?=$data['id_pembayaran']?>" hidden>
           <div class="payment-left">
             <img src="<?=$data['gambar_pembayaran']?>" alt="" />
@@ -78,7 +78,7 @@ if(isset($_GET['c'])){
             <div class="buy-left">
               <p><span id="detail-item"></span><span class="dot"></span><span id="detail-payment"></span></p>
               <p id="detail-price"></p>
-              <p class="info">*Sudah termasuk pajak</p>
+              <p class="info">*Belum termasuk pajak</p>
             </div>
             <div class="buy-right">
               <button id="buy-button">Beli Sekarang</button>

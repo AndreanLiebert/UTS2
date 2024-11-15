@@ -10,7 +10,7 @@
   <body>
     
     <div class="header">
-      <img src="gambare.png" width="100%" height="230px" />
+      <img src="assets/images/web/header.png" width="100%" height="230px" />
     </div>
 
     <div id="navbar">

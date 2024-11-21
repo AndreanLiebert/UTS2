@@ -3,11 +3,6 @@ session_start();
 include_once("../koneksi.php");
 ?>
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,45 +41,34 @@ include_once("../koneksi.php");
             <div>
                 <button class="btn btn-success form-control mt-3" type="submit" name="loginbtn">Login</button>
             </div>
+        </form>
+    </div>
 
-</form>
-</div>
-
-<div class="mt-3">
+    <div class="mt-3">
     <?php
     if(isset($_POST['loginbtn'])){
         $username = htmlspecialchars($_POST['username']);
         $password = htmlspecialchars($_POST['password']);
 
-        $query = mysqli_query($mysqli, "SELECT * FROM users WHERE username='$username'");
-        $countdata= mysqli_num_rows($query);
-        $data = mysqli_fetch_array($query);
+        // $query = mysqli_query($mysqli, "SELECT * FROM users WHERE username='$username'");
+        // $countdata= mysqli_num_rows($query);
+        // $data = mysqli_fetch_array($query);
         
-        if($countdata>0){
-            if (password_verify($password, $data['password'])){
-               $_SESSION['username'] = $data['username'];
-               $_SESSION['login'] = true;
+        // if($countdata>0){
+            if ($username=="admin" && $password=="admin123"){
+               $_SESSION['isAdmin'] = true;
                header('location: index.php');
             }
             else{
-                ?>
+    ?>
                 <div class="alert alert-warning" role="alert">
-                Password salah!
-            </div>
-            <?php
+                    Password salah!
+                </div>
+    <?php
 
             }
-
-         }
-        else{
-            ?>
-            <div class="alert alert-warning" role="alert">
-                Akun tidak tersedia!
-        </div>
-        <?php
-        }
+        // }
     }
-
     ?>
 </div>
 

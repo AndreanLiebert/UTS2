@@ -62,3 +62,21 @@ nambahin gambar produk,pembayarn,dan game serta menambahkan databse buat dm ml d
 remake foto2 sama rewrite database, dibilang samain sama yg udah ada, malah asal nyomot gugel
 nambain field status_game di tbl_game, kode2 ditulis di aturan.txt
 ngerubah pajak di tbl pembayaran jadi fee/biaya
+
+16/11/2024 15:30
+mulai isi bagian admin
+sementara username sama pw admin didalem kode dulu, admin admin123
+
+17/11/2024 19:57
+bikin tambah game di admin
+sama hapus game
+
+18/11/2024 11:06
+dah kelar kontrol admin buat crud game, si andre di chat kgk bales kita tunggu alesan apa dia ini
+
+18/11/2024 22:44
+mulai bikin kontrol admin buat produk, bakalan repot pas create nya, karena gw mau bikin biar bisa banyak create produk sekaligus
+kyknya produk sma barang dipisah aja, barang: diamond,elite pass, dan item top up lainnya, produk itu jumlah sama harganya
+
+21/11/2024 10:15
+admin dah lumayan kelar, tapi kode masih acak2an, push takut korup

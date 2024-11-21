@@ -9,10 +9,13 @@
           <a class="nav-link " href="index.php">Home</a>
         </li>
         <li class="nav-item me-4">
-          <a class="nav-link" href="kategori.php">Kategori</a>
+          <a class="nav-link" href="game.php">Game</a>
         </li>
         <li class="nav-item me-4">
-          <a class="nav-link" href="produk.php">Produk</a>
+          <a class="nav-link" href="product.php">Produk</a>
+        </li>
+        <li class="nav-item me-4">
+          <a class="nav-link" href="item.php">Barang</a>
         </li>
         <li class="nav-item me-4">
           <a class="nav-link" href="logout.php">Logout</a>

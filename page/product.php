@@ -18,22 +18,30 @@ if(isset($_GET['c'])){
 
     <div class="product-item">
       <h3><span class="number">2</span>Pilih Nominal Top Up</h3>
+      <?php
+      $sqll     = "SELECT * FROM tbl_barang WHERE id_game = ".$_GET['c'];
+      $queryy   = mysqli_query($mysqli,$sqll);
+      while($dataa = mysqli_fetch_array($queryy)){
+      ?>
+      <h4><?=$dataa['nama_barang']?></h4>
       <div class="product-content">
       <?php
-      $sql     = "SELECT * FROM tbl_produk WHERE id_game = ".$_GET['c'];
-      $query   = mysqli_query($mysqli,$sql);
-      while($data = mysqli_fetch_array($query)){
+        $iid= $dataa['id_barang'];
+        $sql     = "SELECT * FROM tbl_produk WHERE id_barang ='$iid' ORDER BY jumlah_produk ASC";
+        $query   = mysqli_query($mysqli,$sql);
+        while($data = mysqli_fetch_array($query)){
       ?>
         <div class="item-card" onclick="changeItem(this)">
           <input type="text" value="<?=$data['id_produk']?>" id="item-id" hidden>
           <input type="text" value="<?=$data['harga_produk']?>" id="item-price" hidden>
           <div class="item-top">
-            <h4 id="item-name"><?=$data['jumlah_produk']?> <?=$data['nama_produk']?></h4>
-            <img src="<?=$data['gambar_produk']?>" />
+            <h4 id="item-name"><?=$data['jumlah_produk']?> <?=$dataa['nama_barang']?></h4>
+            <img src="<?=$dataa['gambar_barang']?>" />
           </div>
           <div class="item-bot"><?=$data['harga_produk']?></div>
         </div>
       <?php
+        }
       }
       ?>
       </div>

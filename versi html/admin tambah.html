@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css"> 
+    <link rel="stylesheet" href="../admin/add-game.css">
+    <link rel="stylesheet" href="../admin/global.css">
+    <style>
+        .table img{
+            max-width: 10%;
+        }
+        td{
+            max-width: 5vw;
+        }
+        .status-aktif,.status-nonaktif{
+            background-color: tomato;
+            height: 5vh;
+            width: 20%;
+        }
+        .status-aktif{
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item me-4">
+                <a class="nav-link " href="index.php">Home</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link" href="game.php">Game</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link" href="produk.php">Produk</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link" href="logout.php">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="add-game">
+        <div class="adg-blur"></div>
+        <div class="adg-content">
+            <form action="" method="post">
+                <h2>Tambah Game</h2>
+                <table>
+                    <tr>
+                        <td><label for="name">Nama</label></td>
+                        <td>:</td>
+                        <td><input type="text" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="category">Kategori</label></td>
+                        <td>:</td>
+                        <td><select name="category" required>
+                            <option value="nelayan">Non rekomendasi</option>
+                            <option value="rekomendasi">Rekomendasi</option>
+                        </select></td>
+                    </tr>
+                </table>
+                <img src="" alt="" id="preview-img"><br>
+                <input type="file" name="image" accept=".jpg" id="input-img" required><br>
+                <p>*pastikan ukuran foto tidak lebih dari 255x255</p>
+                <div class="right-me">
+                    <input type="submit" name="add" class="btn btn-success">
+                </div>
+            </form>
+        </div>
+        <script>
+            const ipt = document.getElementById("input-img");
+            const img = document.getElementById("preview-img");
+
+            ipt.addEventListener('change',(event)=>{
+                const file = event.target.files[0]
+                if(file){
+                    const reader = new FileReader();
+                    reader.onload = (e)=>{
+                        img.src = e.target.result;
+                    }
+                    reader.readAsDataURL(file);
+                }
+            })
+        </script>
+    </div>
+<div class="container mt-5">
+    <nav aria-label="breadcrumb">
+     <ol class="breadcrumb">
+         <li class="breadcrumb-item active" aria-current="page">
+             <a href="index.php"><i class="fas fa-home"></i> Home </a>
+         </li>
+         <li class="breadcrumb-item active" aria-current="page">
+             <i class="fas fa-align-justify"></i> Kategori
+         </li>
+     </ol>
+     </nav> 
+
+      <div class="my-5 col-12 col-md-6">
+            <div class="mt-3">
+                <button class="btn btn-primary" type="submit" name="simpan_kategori">Tambah Game</button>
+            </div>
+      </div>
+
+     <div class="mt-3">
+        <h2>List Game</h2>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No-Id</th>
+                        <th>Nama</th>
+                        <th>Gambar</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                      <td>1</td>
+                      <td>nama</td>
+                      <td><img src="../assets/images/game/kat-bs.jpg"></td>
+                      <td><div class="status-aktif"></div></td>
+                      <td><button class="btn btn-warning">Ubah</button><a href=""><button class="btn btn-secondary">Cari produk</button></a></td>
+                    </tr>
+                       
+                </tbody>
+            </table>
+        </div>
+     </div>
+</div>
+    
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../fontawesome/js/all.min.js"></script>
+</body>
+</html>

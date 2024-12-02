@@ -80,3 +80,6 @@ kyknya produk sma barang dipisah aja, barang: diamond,elite pass, dan item top u
 
 21/11/2024 10:15
 admin dah lumayan kelar, tapi kode masih acak2an, push takut korup
+
+02/12/2024
+lanjut isi databse

@@ -10,12 +10,22 @@
 }
 .payment .header{
     background-color: #DFF2EB;
+    background-image: url(../images/web/removebg1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     height: 10%;
+    border-bottom: 1px solid #4A628A;
+    
 }
 .payment .top{
     height: 45%;
     background:linear-gradient(to right, #7AB2D3 40%, #B9E5E8);
     justify-content: start;
+    /* flex-direction: row; */
+    /* padding-bottom: 200px; */
+
+    
     
 }
 .payment .top p{
@@ -36,7 +46,7 @@
     position: absolute;
     height: 100%;
     width: 70%;
-    top: -35%;
+    top: -30%;
     left: 15%;
 }
 .predetail p, .predetail h3{
@@ -81,6 +91,7 @@
 .payment .detail img{
     /* width: 50px; */
     height: 40px;
+    max-width: 70%;
 }
 .payment .detail table tr td:nth-child(1){
     padding-right: 20px;

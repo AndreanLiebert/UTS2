@@ -2,10 +2,8 @@
 <html>
   <head>
     <title>TopUp Zone</title>
-    
-    
-    
     <link rel="stylesheet" href="assets/CSS/global.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head> 
   <body>
     <?php
@@ -39,7 +37,7 @@
       }
     ?>
     <div class="header">
-      <img src="assets/images/web/header1.png" width="100%" height="230px" />
+      
     </div>
 
     <div id="navbar">
@@ -49,7 +47,7 @@
     
     <marquee>Selamat datang di TopupZone,Tempat topup favorit semua orang</marquee>
 
-    <div class="row flexy">
+    <div class="row">
       
       <div class="leftcolumn">
         <div class="card">
@@ -59,28 +57,33 @@
 
       <div class="rightcolumn">
         <div class="card">
-          <h2>aboutxx</h2>
-          <p>data aboutxx</p>
+          <h2>Tentang Kami</h2>
+          <p>Kami adalah TopUp Zone, platform top up game terpercaya yang berkomitmen memberikan pengalaman bertransaksi yang mudah dan cepat.</p>
+          <p>Visi kami adalah menjadi platform top up game nomor satu di Indonesia. Misi kami adalah menyediakan layanan top up game yang aman, cepat, dan mudah untuk semua gamers.</p>
+          <p>Tim kami terdiri dari para profesional yang berpengalaman di bidang game dan teknologi. Kami selalu berusaha memberikan yang terbaik untuk para pelanggan.</p>
+          <p>Kami menjamin keamanan data pribadi Anda. Semua transaksi yang dilakukan di TopUp Zone dijamin aman dan terpercaya.</p>
         </div>
 
         <div class="card er">
-          <h2>SOSIAL MEDIA</h2>
-          <p>
-            Join sosial media Sahabat Mancing untuk saling berinteraksi sesama
-            angler.
-          </p>
+          <h2>Hubungi Kami</h2>
           <div class="sosmed">
-            <a
-              href="https://chat.whatsapp.com/JmlB87cH1Co3bkqXyCUOuy"
+            <a href=""
               target="_blank"
-              ><img src="" alt="" />Whatsapp</a
+              ><img src="./assets/images/web/wa.png" alt="" />086969555</a
             >
           </div>
           <div class="sosmed">
             <a
-              href="https://www.facebook.com/groups/1491049075102696/"
+              href=""
               target="_blank"
-              ><img src="" alt="" />Facebook</a
+              ><img src="./assets/images/web/tel.png" alt="" />@topupzone21</a
+            >
+          </div>
+          <div class="sosmed">
+            <a
+              href=""
+              target="_blank"
+              ><img src="./assets/images/web/ig.png" alt="" />@topupzonegacor</a
             >
           </div>
         </div>

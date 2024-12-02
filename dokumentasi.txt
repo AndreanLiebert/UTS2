@@ -118,3 +118,7 @@ mager dokumentasi gara2 andre jarang bet dokumentasi, berasa projek mandiri
 
 02/12/2024
 lanjut isi databse
+
+03/12/2024 00:22
+rapihin tampilan, fitur batalin transaksi, transaksi berhasil otomatis ke halaman akun setelah 3 detik,
+apakah final? terpaksa final karna jumat sudah wajib presentasi, biar apa 69 ? "biarin" ucap dia

@@ -1,4 +1,4 @@
-<!DOCTYPE php, name : transaction.php>
+<!DOCTYPE php, name : transaction.php> 
 <html>
   <head>
     <title>TopUp Zone</title>
@@ -12,9 +12,6 @@
     session_start();
     date_default_timezone_set("Asia/Jakarta");
     $id = $_SESSION['id'];
-    if(isset($_POST['batal'])){
-      echo "echhhhpppppppppppppppppp";
-    }
     if(isset($_POST['create'])){
       $id = $_SESSION['id'];
       $trid = str_split(strrev($id),strlen($id)/2)[0].$_POST['i-trid'];
@@ -80,7 +77,7 @@
             <div class="payment flexy">
                 <div class="back">
                     <div class="header">
-                        banner dan kawan kawan
+                        
                     </div>
                     <div class="top flexy">
                         <div class="correct">&#10004;</div>
@@ -116,6 +113,11 @@
                     </div>
                 </div>
             </div>
+            <script>
+              setTimeout(()=>{
+                window.location.href = "index.php?page=account";
+              },3000);
+            </script>
             <?php
           }else{
             ?>
@@ -130,6 +132,24 @@
           <?php
         }
       }
+    }else if(isset($_POST['cancel'])){
+      $trid = $_GET['trid'];
+      $qtr = mysqli_query($mysqli, "SELECT * FROM tbl_transaksi WHERE id_transaksi='$trid' AND id_pengguna='$id'");
+      if(mysqli_num_rows($qtr)==0){
+        ?>
+        <p>Data tidak ada</p>
+        <meta http-equiv="refresh" content="1; url=index.php" />
+        <?php
+        return;
+      }else{
+        $qtr = mysqli_query($mysqli, "DELETE FROM tbl_transaksi WHERE id_transaksi='$trid'");
+        ?>
+        <p>Transaksi dibatalkan</p>
+        <meta http-equiv="refresh" content="1; url=index.php" />
+        <?php
+        return;
+      }
+      
     }else if(isset($_GET['trid'])){
       $trid = $_GET['trid'];
       $qtr = mysqli_query($mysqli, "SELECT * FROM tbl_transaksi WHERE id_transaksi='$trid' AND id_pengguna='$id'");
@@ -170,7 +190,7 @@
         <div class="payment flexy">
             <div class="back">
                 <div class="header">
-                    banner dan kawan kawan
+                    
                 </div>
                 <div class="top flexy">
                     <div class="correct">&#10004;</div>
@@ -236,7 +256,7 @@
         <link rel="stylesheet" href="./assets/CSS/transaction.css" />
         <div class="transaction">
           <div class="tr-card">
-              <div class="tr-header">Banner dan kawan kawan</div>
+              <div class="tr-header"></div>
               <div class="tr-content">
                   <div class="tr">
                       <p>Pembelian anda</p>
@@ -265,7 +285,7 @@
                       </form>
                       <hr>
                       <form action="" method="POST">
-                        <button name="buy" id="cancel">Batalkan transaksi ini</button>
+                        <button name="cancel" id="cancel">Batalkan transaksi ini</button>
                       </form>
                   </div>
               </div>

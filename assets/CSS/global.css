@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box; 
   font-family: monospace;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 marquee{
@@ -29,7 +29,12 @@ body::-webkit-scrollbar{
 .header {
   padding: 0px;
   text-align: center;
-  background: white;
+  background: url(../images/web/header1.png);
+  background-color: #4A628A;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35vh;
 }
 .er {
   margin-bottom: 200px;
@@ -53,11 +58,9 @@ body::-webkit-scrollbar{
 }
 
 /* tengah/body */
-
 .leftcolumn {
   float: left;
   width: 75%;
-  /* background-color: #0f0f0f; */
   padding-bottom: 75px;
   padding-left: 20px;
 }
@@ -68,9 +71,7 @@ body::-webkit-scrollbar{
 .rightcolumn {
   float: left;
   width: 23%;
-  /* background-color: #0f0f0f; */
   padding-left: 20px;
-  padding-right: 20px;
 }
 
 /* Add a card effect for articles */
@@ -99,6 +100,13 @@ body::-webkit-scrollbar{
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
+  .header{
+    background: url(../images/web/header800.png);  
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #4A628A;
+  }
   .leftcolumn,
   .rightcolumn {
     width: 100%;
@@ -154,7 +162,6 @@ body::-webkit-scrollbar{
 }
 .card .sosmed a {
   padding-top: 0px;
-  font-size: 1.2rem;
   display: flex;
 }
 

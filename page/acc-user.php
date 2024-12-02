@@ -8,8 +8,8 @@
         header('location: index.php?page=account');
     }
 ?>
+<link rel="stylesheet" href="./assets/CSS/user.css">
 <div class="user">
-        <link rel="stylesheet" href="./assets/CSS/user.css">
          
     <div class="top flexy">
         <div class="info flexy">
@@ -113,6 +113,7 @@
             }
         }
         ?>
+        </div>
         <div class="control-history"></div>
     </div>
 </div>

@@ -12,7 +12,7 @@ if(isset($_GET['c'])){
       <div class="product-content">
         <input type="text" id="gid"/>
         <p class="input-info">
-          *id player berada dibawah telapak kaki ibu
+          *id player berada pada profil atau pada pengaturan permainan
         </p>
       </div>
     </div>
@@ -142,9 +142,8 @@ if(isset($_GET['c'])){
         gid.focus();
         alert("Masukan player id!!");
       }else{
-        
+        showCT(gid.value, item, payment);
       }
-      showCT(gid.value, item, payment);
     }
     function formatNumber(num){
         if(num.toString().length<4) return num;

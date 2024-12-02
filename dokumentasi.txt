@@ -115,3 +115,6 @@ nambain konfirmasi transaksi
 02/12/2024 00:55
 abis nambain transaksi, bisa beli, batalin transaksi, pembayaran berhasil, halaman user sambung riwayat transaksi database 
 mager dokumentasi gara2 andre jarang bet dokumentasi, berasa projek mandiri
+
+02/12/2024
+lanjut isi databse

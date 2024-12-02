@@ -6,8 +6,8 @@ if(isset($_GET['c'])){
 }else{
 
 ?>
-
-<h1>Sedang Hangat</h1>
+<link rel="stylesheet" href="assets/CSS/catalog.css" />
+<h1>Rekomendasi</h1>
 <div class="catalog" style="margin-bottom: 50px;">
   <?php
     $sql     = "SELECT * FROM tbl_game WHERE kategori_game ='rekomendasi' AND status_game = 1";

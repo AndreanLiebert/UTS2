@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>TopUp Zone</title>
-    <!-- <link rel="stylesheet" href="CSS/product.css" /> -->
-    <!-- <link rel="stylesheet" href="assets/CSS/catalog.css" />
-    <link rel="stylesheet" href="assets/CSS/product.css" /> -->
+    
+    
+    
     <link rel="stylesheet" href="assets/CSS/global.css" />
   </head> 
   <body>
@@ -49,7 +49,7 @@
     
     <marquee>Selamat datang di TopupZone,Tempat topup favorit semua orang</marquee>
 
-    <div class="row">
+    <div class="row flexy">
       
       <div class="leftcolumn">
         <div class="card">

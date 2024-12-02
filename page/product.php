@@ -5,7 +5,7 @@ if(isset($_GET['c'])){
 
   include_once('./page/confirm transaction.html');
 ?>
-
+<link rel="stylesheet" href="assets/CSS/product.css" />
 <div class="product"> 
     <div class="product-userInput">
       <h3><span class="number">1</span>Masukkan Player ID</h3>

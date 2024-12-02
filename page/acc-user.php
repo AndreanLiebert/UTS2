@@ -10,6 +10,7 @@
 ?>
 <div class="user">
         <link rel="stylesheet" href="./assets/CSS/user.css">
+         
     <div class="top flexy">
         <div class="info flexy">
         <img src="./assets/images/web/login.png" alt="">

@@ -55,9 +55,12 @@ input{
     border-radius: 10px;
     box-shadow: 0 1px 3px black;
     margin-bottom: 10px;
+    transition: 0.25s;
 }
-.item-card:hover{
+.item-card:hover .item-bot{
     cursor: pointer;
+    background-color:#4A628A;
+    color: #DFF2EB;
 }
 
 .item-top{
@@ -74,15 +77,18 @@ input{
     /* background-color: red; */
 }
 .item-bot{
+    transition: 0.25s;
     border-radius: 0 0 10px 10px;
     text-align: right;
     background-color: #B9E5E8;
     color: purple;
     padding: 10px 3px 10px 0;
 }
-.item-choosen{
-    border: 4px solid;
-    border-color: purple;
+.item-choosen .item-bot{
+    background-color:#4A628A;
+    color: #DFF2EB;
+    /* border: 4px solid; */
+    /* border-color: purple; */
 }
 
 .payment-card{
@@ -95,6 +101,20 @@ input{
     justify-content: space-between;
     padding: 3px 10px 3px 10px;
     margin-bottom: 10px;
+    transition: 0.25s;
+}
+.payment-card:hover{
+    cursor: pointer;
+    background: linear-gradient(to right,#DFF2EB,#7AB2D3, #4A628A);
+}
+.payment-card:hover .payment-right{
+    color: #DFF2EB;
+}
+.payment-choosen{
+    background: linear-gradient(to right,#DFF2EB,#7AB2D3, #4A628A);
+}
+.payment-choosen .payment-right{
+    color: #DFF2EB;
 }
 .payment-left{
     display: flex;
@@ -117,11 +137,6 @@ input{
     color: purple;
     width: 40%;
 }
-.payment-choosen{
-    border: 4px solid;
-    border-color: purple;
-}
-
 .rule{
     margin-top: 0;
 }

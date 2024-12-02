@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 1rem;
+  }
+  
+  marquee{
+    margin-top: 5px;
+    border-left:1px solid white ;
+    border-right:1px solid white ;
+  }
+  
+  h1{
+    color: hsl(218, 30%, 32%);
+    font-size: 1.5rem;
+  }
+  body {
+    margin: 0;
+    font-family: Arial;
+    padding: 0px;
+    background-color: #7AB2D3;
+  }
+  
+  body::-webkit-scrollbar{
+    display: none;
+  }
+  
+  /* atas/header */
+  .header {
+    padding: 0px;
+    text-align: center;
+    background: white;
+  }
+  .er {
+    margin-bottom: 200px;
+  }
+  #navbar {
+    border-top: 5px solid hsl(218, 30%, 72%);
+    box-shadow: 0 1px 3px black;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    text-align: right;
+    background-color: #4A628A;
+    z-index: 3;
+  }
+  #navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  /* tengah/body */
+  
+  .leftcolumn {
+    float: left;
+    width: 75%;
+    /* background-color: #0f0f0f; */
+    padding-bottom: 75px;
+    padding-left: 20px;
+  }
+  .card .judul {
+    border-bottom: 3px solid;
+  }
+  
+  .rightcolumn {
+    float: right;
+    width: 23%;
+    /* background-color: #0f0f0f; */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: #B9E5E8 ;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 0px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 0px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 10px;
+  }
+  
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4A628A;
+    color: white;
+    text-align: center;
+  }
+  
+  .footer a {
+    position: fixed;
+    top: 80vh;
+    right: -5px;
+  }
+  .footer img {
+    width: 100px;
+  }
+  
+  .sosmed {
+    margin-bottom: 10px;
+  }
+  .sosmed img {
+    width: 25px;
+    margin-right: 5px;
+  }
+  .card .sosmed a {
+    padding-top: 0px;
+    font-size: 1.2rem;
+    display: flex;
+  }
+   
+  .leftcolumn {
+    padding: 40px;
+    background-color: #DFF2EB; /* Warna utama untuk latar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #4A628A; /* Warna teks utama */
+  }
+  
+  .leftcolumn h3 {
+    color: #4A628A;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .leftcolumn p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .leftcolumn button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .leftcolumn button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Warna untuk tombol */
+  #initial-choice button {
+    background-color: #7AB2D3;
+  }
+  
+  #signin button {
+    background-color: #4A628A;
+  }
+  
+  #signup button {
+    background-color: #B9E5E8;
+  }
+  
+  /* Input field styling */
+  .leftcolumn form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #B9E5E8;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  .leftcolumn form input:focus {
+    outline: none;
+    border-color: #7AB2D3;
+    background-color: #f9fcfc;
+  }
+  
+  /* Navigation Menu */
+  #navigation-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  #navigation-menu ul li {
+    margin: 10px 0;
+  }
+  
+  #navigation-menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #4A628A;
+    display: block;
+    padding: 10px;
+    background-color: #B9E5E8;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  #navigation-menu ul li a:hover {
+    background-color: #7AB2D3;
+    color: #fff;
+  }
+  
+  /* Tab section for Sign In and Sign Up */
+  .tab {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tab button {
+    background-color: #B9E5E8;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #4A628A;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab button.active {
+    background-color: #7AB2D3;
+    color: #fff;
+  }
+  
+  .tab button:hover {
+    background-color: #4A628A;
+    color: #fff;
+  }
+  
+  .carousel-container {
+    position: relative;
+    max-width: 400px; /* Batasi ukuran maksimum */
+    margin: auto;
+  }
+  
+  .carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  #carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .transaction {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: left;
+    padding: 10px; /* Kurangi padding */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px; /* Kurangi ukuran font */
+    line-height: 1.4; /* Sesuaikan jarak antar baris */
+    margin: 5px; /* Tambahkan jarak antar transaksi */
+  }
+  
+  .transaction h4 {
+    font-size: 16px; /* Kurangi ukuran judul */
+    margin-bottom: 8px;
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 8px; /* Perkecil tombol */
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .carousel-btn.prev {
+    left: -15px; /* Perkecil jarak tombol ke kiri */
+  }
+  
+  .carousel-btn.next {
+    right: -15px; /* Perkecil jarak tombol ke kanan */
+  }
+  
+  .carousel-btn:hover {
+    background-color: rgba(86, 174, 224, 0.8);
+  }

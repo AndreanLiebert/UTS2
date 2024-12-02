@@ -80,3 +80,38 @@ kyknya produk sma barang dipisah aja, barang: diamond,elite pass, dan item top u
 
 21/11/2024 10:15
 admin dah lumayan kelar, tapi kode masih acak2an, push takut korup
+
+21/11/2024 10:36
+bikin menunggu pembayaran
+
+21/11/2024 20:34
+rapihin tampilan produk versi client, sering2 buat progress dre, pak bayu mantau git ini
+
+24/11/2024 23:31
+sigma banget tampilan akun usernya buatan kau
+dibilang didalem div card masih aja div cardnya malah gk ada
+gk usah dah terlanjur jadi repot
+gk jadi gw benerin ini ngerepotin gw doang anak setan 
+gw bikin baru aja
+nggak plek ketiplek mbagpt juga kali
+malah gk ada dokumentasi segala
+gw laporin pak bayu suruh dance kompa kompa mampus lu
+
+26/11/2024 22:45
+mulai bikin pembayaran berhasil
+salah bikin..
+udahan dulu mau jadi donatur, absen dulu yg gacor, yg rungkat uninstal aja
+
+28/11/2024 22:04
+mulai nambain halaman akun user + database
+S I G M A
+
+29/11/2024 12:45
+mulai masuk ke transaksi + database
+
+30/11/2024 10:23
+nambain konfirmasi transaksi
+
+02/12/2024 00:55
+abis nambain transaksi, bisa beli, batalin transaksi, pembayaran berhasil, halaman user sambung riwayat transaksi database 
+mager dokumentasi gara2 andre jarang bet dokumentasi, berasa projek mandiri

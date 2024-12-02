@@ -1,0 +1,14 @@
+Dibikin biar apa?  biar gk lupa klo ada ide mendadak tapi ditunda
+
+1.[PENDING] tampilan pembayaran berhasil
+2.[PENDING] isi database, produk sama barang
+3.[PENDING] nambah field baru buat inputan game kan beda2 posisi id nya, antara id atau uid
+4.[PENDING] recolor semua tampilan, yg skrg gk indah dipandang, biru butek
+5.[PENDING] guest session, trus kalo log in/sign in semua data guest pindah ke akun itu
+6.[PENDING] polling ajax buat admin cek transaksi baru terus menerus tanpa refresh halaman manual
+7.[PENDING] database transaksi
+8.[PENDING] database akun pembeli (akun topup zone)
+9.[PENDING] ganti banner, tapi abis kelar no 4
+10.[PENDING] fitur di user riwayat transaksi, tombol biar bisa ambil data selanjutnya kalo seandainya datanya banyak, jadi gk lgsg ambil semua riwayat
+11.[PENDING] animasiin pembayaran berhasil, dan kawan kawanya
+12.[PENDING] admin item, kalo udah ada gk bisa (nama barang), kecuali update

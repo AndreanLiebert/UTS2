@@ -35,6 +35,9 @@ function changeBuy(){
     document.querySelector("#detail-payment").textContent = payment.name;
     document.querySelector("#detail-price").textContent = `Rp. ${formatNumber(item.price+payment.fee)}`;
 }
+document.getElementById("buy-button").onclick = ()=>{
+    showCT(item.name,payment.name);
+}
 function formatNumber(num){
     if(num.toString().length<4) return num;
     let dot = 1;

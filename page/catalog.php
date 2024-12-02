@@ -2,12 +2,12 @@
 include_once('koneksi.php');
 
 if(isset($_GET['c'])){
-  include "page/product.php";
+  include_once "page/product.php";
 }else{
 
 ?>
 
-<h1>Rekomendasi</h1>
+<h1>Sedang Hangat</h1>
 <div class="catalog" style="margin-bottom: 50px;">
   <?php
     $sql     = "SELECT * FROM tbl_game WHERE kategori_game ='rekomendasi' AND status_game = 1";

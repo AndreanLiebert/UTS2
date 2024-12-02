@@ -3,13 +3,14 @@ include_once('koneksi.php');
 
 if(isset($_GET['c'])){
 
+  include_once('./page/confirm transaction.html');
 ?>
 
 <div class="product"> 
     <div class="product-userInput">
       <h3><span class="number">1</span>Masukkan Player ID</h3>
       <div class="product-content">
-        <input type="text" />
+        <input type="text" id="gid"/>
         <p class="input-info">
           *id player berada dibawah telapak kaki ibu
         </p>
@@ -36,7 +37,7 @@ if(isset($_GET['c'])){
           <input type="text" value="<?=$data['harga_produk']?>" id="item-price" hidden>
           <div class="item-top">
             <h4 id="item-name"><?=$data['jumlah_produk']?> <?=$dataa['nama_barang']?></h4>
-            <img src="<?=$dataa['gambar_barang']?>" />
+            <img src="<?=$dataa['gambar_barang']?>" id="item-img" />
           </div>
           <div class="item-bot"><?=$data['harga_produk']?></div>
         </div>
@@ -89,14 +90,76 @@ if(isset($_GET['c'])){
               <p class="info">*Belum termasuk pajak</p>
             </div>
             <div class="buy-right">
-              <button id="buy-button">Beli Sekarang</button>
+              <button id="buy-button" onclick="preShowCT()">Beli Sekarang</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <script src="assets/JS/product.js"></script>
+  <script>
+    let item = {name:"",id:null,price:null,img:""};
+    let payment = {name:"",id:null,fee:null};
+    let prevISpotlight=null,ISpotight=null;
+    let prevPSpotlight=null,PSpotight=null;
+    let allPayment = document.querySelectorAll(".payment-card");
+    let allItem = document.querySelectorAll(".item-card");
+    function changeItem(comp){
+        ISpotight=comp;
+        if(prevISpotlight!=null){prevISpotlight.classList.remove("item-choosen");}
+        prevISpotlight=comp;
+        ISpotight.classList.add("item-choosen");
+        item.id = comp.querySelector("#item-id").value;
+        item.name = comp.querySelector("#item-name").textContent;
+        item.img = comp.querySelector("#item-img").src;
+        item.price = parseInt(comp.querySelector("#item-price").value);
+        for(let i=0;i<allPayment.length;i++){
+            allPayment[i].querySelector("#price").textContent = `Rp. ${formatNumber(item.price+parseInt(allPayment[i].querySelector("#payment-fee").value))}`;
+        }
+        if(PSpotight==null) changePayment(allPayment[0]);
+        else changeBuy();
+    }
+    function changePayment(comp){
+        PSpotight=comp;
+        if(prevPSpotlight!=null){prevPSpotlight.classList.remove("payment-choosen");}
+        prevPSpotlight=comp;
+        PSpotight.classList.add("payment-choosen");
+        payment.name = comp.querySelector("#payment-name").textContent;
+        payment.id = comp.querySelector("#payment-id").value;
+        payment.fee = parseInt(comp.querySelector("#payment-fee").value);
+        if(item.id==null) changeItem(allItem[0]);
+        changeBuy();
+    }
+    function changeBuy(){
+        document.querySelector(".product-buy").style.display="block";
+        document.querySelector("#detail-item").textContent = item.name;
+        document.querySelector("#detail-payment").textContent = payment.name;
+        document.querySelector("#detail-price").textContent = `Rp. ${formatNumber(item.price+payment.fee)}`;
+    }
+    function preShowCT(){
+      let gid = document.querySelector("#gid");
+      if(gid.value.trim().length==0){
+        gid.focus();
+        alert("Masukan player id!!");
+      }else{
+        
+      }
+      showCT(gid.value, item, payment);
+    }
+    function formatNumber(num){
+        if(num.toString().length<4) return num;
+        let dot = 1;
+        let rtn ="";
+        for(let i=num.toString().length-1;i>=0;i--){
+            rtn = (dot>=3&&i!=0?`.${num.toString()[i]}`:num.toString()[i]) + rtn;
+            dot = dot>=3?1:(dot+1);
+        }
+        return rtn;
+    }
+    for(let i=0;i<allItem.length;i++){
+        allItem[i].querySelector(".item-bot").textContent = "Rp. "+formatNumber(allItem[i].querySelector(".item-bot").textContent);
+    }
+  </script>
 <?php
 }else{
   include "page/catalog.php";

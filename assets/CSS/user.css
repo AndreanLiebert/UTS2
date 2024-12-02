@@ -1,0 +1,90 @@
+.user .top{ 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user .info img{
+    width: 50px;
+    margin-right: 10px;
+
+}
+.user .top .info{
+    flex-direction: row;
+    /* background-color: red; */
+}
+.user .top button img{
+    width: 40px;
+    /* background-color: red; */
+}
+.user .top button{
+    flex-direction: row;
+}
+.user .mid{
+    margin-top: 50px;
+}
+.user .mid h3{
+    text-decoration: underline;
+}
+
+.user .mid .history{
+    align-items: start;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.history .history-total{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.history .history-card{
+    background-color: #DFF2EB;
+    width: 50%;
+    max-width: 500px;
+}
+.status-history-warning{
+    background-color: yellow;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    font-size: 0.9rem;
+}
+.status-history-danger{
+    background-color: red;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.9rem;
+}
+.status-history-safe{
+    background-color: green;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.9rem;
+}
+.history-card table tr td:nth-child(1){
+    color: hsl(0, 0%, 40%);
+}
+.history-card table tr td:nth-child(2){
+    padding: 0 20px;
+}
+
+.history-total p{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: purple;
+}
+
+
+@media screen and (max-width:800px) {
+    .user .mid .history{
+        justify-content: center;
+
+    }
+    .history .history-card{
+        background-color: #DFF2EB;
+        width: 100%;
+    }
+}

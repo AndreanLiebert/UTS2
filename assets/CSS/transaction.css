@@ -1,0 +1,121 @@
+.transaction{
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(218, 30%, 20%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.tr-card{
+    background-color: #4A628A;
+    width: 555px;
+    height: 100vh;
+    /* background-color: red; */
+}
+.tr-header{
+    background-color: #B9E5E8;
+    height: 10vh;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    /* background-image: url("../images/web/header.png");
+    background-repeat: no-repeat;
+    background-size: contain; */
+}
+.tr-content{
+    color: white;
+    padding: 0 50px;
+}
+.tr{
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #DFF2EB;
+    color: black;
+    padding: 10px;
+}
+.tr div{
+    display: flex;
+}
+.tr>p{
+    margin: 0;
+
+}
+.tr>h4{
+    /* background-color: rebeccapurple; */
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+}
+.tr div p{
+    margin: 10px 0;
+}
+.tr div p:nth-child(2){
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+
+}
+.tr-payment img{
+    height: 44px;
+}
+.tr div p:nth-child(1){
+    min-width: 145px;
+    max-width: 145px;
+    margin-right: 10px;
+}
+.tr-total p:nth-child(2){
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+.timer{
+    /* background-color: red; */
+    display: flex;
+}
+.timer p{
+    color: hsl(0, 0%, 90%);
+    /* background-color: yellow; */
+    width: 50%;
+}
+.timer p:nth-child(2){
+    color: white;
+    
+    /* background-color: red; */
+    text-align: end;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.control{
+    margin-top: 10%;
+}
+.control button{
+    background-color: hsl(270, 50%, 35%);
+    box-shadow: 0 0 5px white;
+    color: #DFF2EB;
+    border: none;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 3%;
+}
+.control button:hover{
+    background-color: hsl(270, 50%, 40%);
+}
+.control button:active{
+    background-color: hsl(270, 50%, 55%);
+}
+.control a{
+    color: #DFF2EB;
+    text-align: left;
+}
+
+.control a:active{
+    color: red;
+    text-align: left;
+}
+
+@media screen and (max-width:800px){
+    .tr-header{
+        border-radius:0;
+    }
+}

@@ -1,0 +1,57 @@
+
+.sign{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.sign .sign-control{
+    width: 100%;
+}
+.sign form{
+    width: 100%;
+}
+.sign input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+.line{
+    border: 1px solid;
+    width: 100%;
+    /* border-color: aqua; */
+}
+.sign-choice{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sign-choice p{
+    margin: 10px 10px;
+}
+#control-user{
+    border: none;
+    background-color: #B9E5E8;
+    text-decoration: underline;
+    color: blue;
+}
+
+.sign input[type="submit"]{
+    background-color: #4A628A;
+    color: white;
+}
+.sign input[type="submit"]:hover{
+    background-color: hsl(218, 30%, 32%);
+}
+.sign input[type="submit"]:active{
+    background-color: hsl(218, 30%, 22%);
+}
+.sign h3{
+    font-size: 1.3rem;
+}
+.sign #sign-error{
+    color: red;
+    text-align: left;
+    font-weight: bold;
+}

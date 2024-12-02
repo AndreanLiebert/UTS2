@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopUp Zone</title>
+    <link rel="stylesheet" href="../assets/CSS/global.css" />
+    <link rel="stylesheet" href="../assets/CSS/transaction.css" />
+</head>
+<body>
+    <div class="transaction">
+        <div class="tr-card">
+            <div class="tr-header">Banner dan kawan kawan</div>
+            <div class="tr-content">
+                <div class="tr">
+                    <p>Pembelian anda</p>
+                    <h4>Free Fire-Diamonds</h4>
+                    <div class="tr-seller">
+                        <p>Pedagang</p>
+                        <p>Free Fire</p>
+                    </div>
+                    <div class="tr-payment">
+                        <p>Metode Pembayaran</p>
+                        <img src="../assets/images/payment/shopeepay.png" alt="">
+                    </div>
+                    <div class="tr-total">
+                        <p>Jumlah Total</p>
+                        <p>Rp. 99.999.999</p>
+                    </div>
+                </div>
+                <div class="timer">
+                    <p>Silakan selesaikan pembayaran Anda dalam</p>
+                    <p id="timer">0:00:00</p>
+                </div>
+                <p>Tekan lanjutkan untuk menyelesaikan pembayaran anda</p>
+                <div class="control">
+                    <button>Lanjutkan</button><br>
+                    <hr>
+                    <a href="">Batalkan transaksi ini</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let time = Date.now()+((1000*60));
+        let timer = document.getElementById("timer");
+        let min;let sec;let intv;
+        if(time>Date.now()){
+            intv = setInterval(()=>{
+                sec = Math.floor((time-Date.now())/1000%60);
+                if(sec<=0){ 
+                    clearInterval(intv)
+                }
+                min = Math.floor((time-Date.now())/1000/60);
+                timer.textContent=`0:${min.toString().padStart(2,"0")}:${sec.toString().padStart(2,"0")}`;
+            },1000)
+        }
+    </script>
+</body>
+</html>

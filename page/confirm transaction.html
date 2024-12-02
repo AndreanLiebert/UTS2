@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./assets/CSS/confirm transaction.css">
 <div class="confirm-transaction">
   <div class="ctr-blur"></div>
   <div class="ctr-content">
@@ -7,31 +8,39 @@
         <p>Pastikan data player sudah benar</p>
       </div>
       <div class="right">
-        <button>&#10006;</button>
+        <button onclick="closeCT()">&#10006;</button>
       </div>
     </div>
+    <form action="transaction.php" method="POST">
+
+    
     <div class="ctr-item">
-      <img src="assets/images/product/pdc-ff.png" alt="">
-      <p>5 Diamonds</p>
+      <img src="" alt="" id="d-iimg">
+      <p id="d-iname"></p>
     </div>
     <div class="ctr-detail">
       <table>
         <tbody>
           <tr>
             <td>ID player:</td>
-            <td>252125121</td>
+            <td id="d-gid"></td>
+            <input type="text" id="i-iid" name="i-iid" hidden>
+            <input type="text" id="i-gid" name="i-gid" hidden>
+            <input type="text" id="i-trid" name="i-trid" hidden>
           </tr>
           <tr>
             <td>Bayar dengan:</td>
-            <td>ShopeePay</td>
+            <td id="d-pname"></td>
+            <input type="text" id="i-pid" name="i-pid" hidden>
           </tr>
           <tr>
             <td>Harga:</td>
-            <td>Rp. 1.000</td>
+            <td id="d-iprice"></td>
           </tr>
           <tr>
             <td>Pajak(10%)</td>
-            <td>Rp. 100</td>
+            <td id="d-tax"></td>
+            <input type="text" id="i-tax" name="i-tax" hidden>
           </tr>
         </tbody>
       </table>
@@ -39,11 +48,44 @@
     <div class="ctr-footer">
       <div class="left">
         <p>Total pembayaran</p>
-        <h3>Rp. 99.999.999</h3>
+        <h4 id="d-total"></h4>
+        <input type="text" id="i-total" name="i-total" hidden>
       </div>
       <div class="right">
-        <button>Konfirmasi</button>
+        <button value="submit" name="create">Konfirmasi</button>
       </div>
     </div>
+    </form>
   </div>
 </div>
+<script>
+  let ct = document.querySelector(".confirm-transaction");
+  function closeCT(){
+    ct.style.display = "none";
+  }
+  function showCT(gid, item, payment){
+    ct.style.display = "flex";
+    let price=item.price + payment.fee;
+    let tax=(item.price + payment.fee)*0.1;
+    let total=price+tax;
+    document.getElementById("d-iname").textContent = item.name;
+    document.getElementById("d-iimg").src = item.img;
+    document.getElementById("i-iid").value = item.id;
+    
+    document.getElementById("d-gid").textContent = gid;
+    document.getElementById("i-gid").value = gid;
+    document.getElementById("i-trid").value = Date.now();
+    
+    document.getElementById("d-pname").textContent = payment.name;
+    document.getElementById("i-pid").value = payment.id;
+
+    document.getElementById("d-iprice").textContent = `Rp. ${formatNumber(price)}`;
+
+    document.getElementById("d-tax").textContent = `Rp. ${formatNumber(tax)}`;
+    document.getElementById("i-tax").value = tax;
+
+    document.getElementById("d-total").textContent = `Rp. ${formatNumber(total)}`;
+    document.getElementById("i-total").value = total;
+
+  }
+</script>

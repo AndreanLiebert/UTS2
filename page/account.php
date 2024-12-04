@@ -5,6 +5,7 @@ $error_msg="";
 if(isset($_POST['signIn'])){
     $usn = $_POST['username'];
     $pass = $_POST['password'];
+    $pass = md5($pass,false);
     $q1 = mysqli_query($mysqli, "SELECT * FROM tbl_pengguna WHERE nama_pengguna='$usn' and password_pengguna='$pass'");
     if(mysqli_num_rows($q1)==0){
         $error_msg="Username atau password salah!!";
@@ -32,9 +33,12 @@ if(isset($_POST['signIn'])){
         $error_msg="Username sudah ada!!";
     }else if(strlen($pass)<8){
         $error_msg="Password terlalu pendek (minimal 8)!!";
+    }else if(strlen($usn)>15){
+        $error_msg="Username terlalu panjang (maximal 15)!!";
     }else if($pass !== $cpass){
         $error_msg="Password tidak cocok!!";
     }else{
+        $pass = md5($pass,false);
         mysqli_query($mysqli, "UPDATE tbl_pengguna SET nama_pengguna='$usn', password_pengguna='$pass',akun_tamu=0 WHERE id_pengguna ='$id'");
         $_SESSION['password'] = $pass;
         ?>

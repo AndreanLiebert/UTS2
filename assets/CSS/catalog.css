@@ -7,13 +7,13 @@
   flex-wrap: wrap;
   flex-direction: row;
   gap: 5%;
-}
+} 
 .card-catalog {
-  max-width: 150px;
   background-color:#DFF2EB;
   box-shadow: 0px 1px 4px black;
   text-align: center;
   width: 30%;
+  max-width: 142px;
   margin-top: 20px;
   cursor: pointer;
   transition: 0.25s;

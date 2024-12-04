@@ -75,7 +75,7 @@ $jItem = mysqli_num_rows($qItem);
                 $forDbimg=$forDb.$name_file;
                 move_uploaded_file($temp,$forDbimg);
 
-                $queryExist = mysqli_query($mysqli, "SELECT nama_barang FROM tbl_barang WHERE nama_barang='$name'");
+                $queryExist = mysqli_query($mysqli, "SELECT nama_barang FROM tbl_barang WHERE nama_barang='$name' AND id_game='$idg'");
                 $jml = mysqli_num_rows($queryExist);
 
                 if($jml > 0){

@@ -18,6 +18,12 @@
           <a class="nav-link" href="item.php">Barang</a>
         </li>
         <li class="nav-item me-4">
+          <a class="nav-link" href="transaction.php">Transaksi</a>
+        </li>
+        <li class="nav-item me-4">
+          <a class="nav-link" href="user.php">Pengguna</a>
+        </li>
+        <li class="nav-item me-4">
           <a class="nav-link" href="logout.php">Logout</a>
         </li>
       </ul>

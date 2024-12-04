@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="control-game.css">
+
+<!-- hapus -->
+<div class="control-game" id="delete-game">
+    <div class="ctrl-blur"></div>
+    <div class="ctrl-content">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="right-me">
+                <button id="delete-game-close">&#10006;</button>
+            </div>
+            <input type="text" name="id" id="delete-id" hidden>
+            <h3 id="delete-title">Hapus?</h3>
+            <div class="right-me">
+                <input type="submit" name="delete" value="Hapus" class="btn btn-danger">
+            </div>
+        </form>
+    </div>
+    <script>
+        const deletegame = document.getElementById("delete-game");
+        document.getElementById("delete-game-close").onclick = (event)=>{
+            deletegame.style.display = "none";
+        }
+        function deleteGameShow(id,no){
+            deletegame.style.display = "flex";
+            document.querySelector("#delete-id").value = id;
+            document.querySelector("#delete-title").textContent = `Hapus no ${no}?`;
+        }
+    </script>
+</div>

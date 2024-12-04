@@ -13,6 +13,12 @@
 
     $jPembayaran = mysqli_query($mysqli, "SELECT * FROM tbl_pembayaran");
     $jumPembayaran = mysqli_num_rows($jPembayaran);
+
+    $jTransaksi = mysqli_query($mysqli, "SELECT * FROM tbl_transaksi");
+    $jumTransaksi = mysqli_num_rows($jTransaksi);
+    
+    $jPengguna = mysqli_query($mysqli, "SELECT * FROM tbl_pengguna");
+    $jumPengguna = mysqli_num_rows($jPengguna);
     ?> 
     <!DOCTYPE html>
     <html lang="en"> 
@@ -106,6 +112,34 @@
                               <h3 class="fs-3">Pembayaran</h3>
                               <p class="fs-4"><?php echo $jumPembayaran ?> Metode</p>
                               <p><a href="payment.php" class="text-white no-decoration">Lihat Detail</a></p> 
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-12 mb-3">
+                     <div class="summary-game p-3">
+                        <div class="row">
+                           <div class="col-6">
+                             <i class="fas fa-box fa-7x text-black-50"></i>
+                           </div>
+                           <div class="col-6 text-white">
+                              <h3 class="fs-3">Transaksi</h3>
+                              <p class="fs-4"><?php echo $jumTransaksi ?> Transaksi</p>
+                              <p><a href="transaction.php" class="text-white no-decoration">Lihat Detail</a></p> 
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-12 mb-3">
+                     <div class="summary-game p-3">
+                        <div class="row">
+                           <div class="col-6">
+                             <i class="fas fa-box fa-7x text-black-50"></i>
+                           </div>
+                           <div class="col-6 text-white">
+                              <h3 class="fs-3">Pengguna</h3>
+                              <p class="fs-4"><?php echo $jumPengguna ?> Pengguna</p>
+                              <p><a href="user.php" class="text-white no-decoration">Lihat Detail</a></p> 
                            </div>
                         </div>
                      </div>

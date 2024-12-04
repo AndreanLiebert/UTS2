@@ -122,3 +122,6 @@ lanjut isi databse
 03/12/2024 00:22
 rapihin tampilan, fitur batalin transaksi, transaksi berhasil otomatis ke halaman akun setelah 3 detik,
 apakah final? terpaksa final karna jumat sudah wajib presentasi, biar apa 69 ? "biarin" ucap dia
+
+04/12/2024 11:40
+nambain enkripsi password pengguna, panel admin transaksi sama pengguna

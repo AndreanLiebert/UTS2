@@ -24,7 +24,7 @@ if(isset($_GET['c'])){
       $queryy   = mysqli_query($mysqli,$sqll);
       while($dataa = mysqli_fetch_array($queryy)){
       ?>
-      <h4><?=$dataa['nama_barang']?></h4>
+      <h4 class="item-title"><?=$dataa['nama_barang']?></h4>
       <div class="product-content">
       <?php
         $iid= $dataa['id_barang'];

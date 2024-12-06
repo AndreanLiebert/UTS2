@@ -56,7 +56,6 @@
                   </li>
                </ol>
             </nav>
-            <h2>halo admin</h2>
             
             <div class="container mt-5">
                <div class="row">
@@ -64,7 +63,7 @@
                     <div class="summary-game p-3">
                       <div class="row">
                          <div class="col-6">
-                            <i class="fas fa-align-justify fa-7x text-black-50"></i>
+                            <i class="fas fa-gamepad fa-7x text-black-50"></i>
                          </div>
                          <div class="col-6 text-white">
                               <h3 class="fs-2">Game</h3>
@@ -92,7 +91,7 @@
                      <div class="summary-game p-3">
                         <div class="row">
                            <div class="col-6">
-                             <i class="fas fa-box fa-7x text-black-50"></i>
+                             <i class="fas fa-file fa-7x text-black-50"></i>
                            </div>
                            <div class="col-6 text-white">
                               <h3 class="fs-2">Produk</h3>
@@ -106,7 +105,7 @@
                      <div class="summary-game p-3">
                         <div class="row">
                            <div class="col-6">
-                             <i class="fas fa-box fa-7x text-black-50"></i>
+                             <i class="fas fa-money-bill fa-7x text-black-50"></i>
                            </div>
                            <div class="col-6 text-white">
                               <h3 class="fs-3">Pembayaran</h3>
@@ -120,7 +119,7 @@
                      <div class="summary-game p-3">
                         <div class="row">
                            <div class="col-6">
-                             <i class="fas fa-box fa-7x text-black-50"></i>
+                             <i class="fas fa-align-justify fa-7x text-black-50"></i>
                            </div>
                            <div class="col-6 text-white">
                               <h3 class="fs-3">Transaksi</h3>
@@ -134,7 +133,7 @@
                      <div class="summary-game p-3">
                         <div class="row">
                            <div class="col-6">
-                             <i class="fas fa-box fa-7x text-black-50"></i>
+                             <i class="fas fa-person fa-7x text-black-50"></i>
                            </div>
                            <div class="col-6 text-white">
                               <h3 class="fs-3">Pengguna</h3>

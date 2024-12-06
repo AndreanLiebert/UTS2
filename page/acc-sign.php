@@ -22,25 +22,28 @@
         <span class="line"></span><p>atau</p><span class="line"></span>
       </div>
     </form>
-    <button onclick="changeSignControl()" id="control-user">Buat akun</button>
+    <button onclick="changeSignControl()" id="control-user">Belum mempunyai akun?</button>
+    <p>*masuk atau daftar ke TopUp Zone untuk melihat riwayat transaksi</p>
   </div>
 </div>
 <script>
   let sign = document.querySelector(".sign");
+  let signError = document.getElementById("sign-error");
   function changeSignControl(){
-    if(sign.querySelector("#control-user").textContent=="Buat akun"){
+    signError.textContent="";
+    if(sign.querySelector("#control-user").textContent=="Belum mempunyai akun?"){
       sign.querySelector("#si-usn").value = "";
       sign.querySelector("#si-pass").value = "";
       sign.querySelector("#f-signin").style.display = "none";
       sign.querySelector("#f-signup").style.display = "block";
-      sign.querySelector("#control-user").textContent = "Masuk";
+      sign.querySelector("#control-user").textContent = "Sudah mempunyai akun?";
     }else{
       sign.querySelector("#su-usn").value = "";
       sign.querySelector("#su-pass").value = "";
       sign.querySelector("#su-cpass").value = "";
       sign.querySelector("#f-signin").style.display = "block";
       sign.querySelector("#f-signup").style.display = "none";
-      sign.querySelector("#control-user").textContent = "Buat akun";
+      sign.querySelector("#control-user").textContent = "Belum mempunyai akun?";
     }
   }
 </script>

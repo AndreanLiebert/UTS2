@@ -36,6 +36,10 @@
     text-decoration: underline;
     color: blue;
 }
+#control-user:hover{
+    color: hsl(240, 100%, 40%);
+    cursor: pointer;
+}
 
 .sign input[type="submit"]{
     background-color: #4A628A;

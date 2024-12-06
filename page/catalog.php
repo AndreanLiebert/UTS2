@@ -7,7 +7,7 @@ if(isset($_GET['c'])){
 
 ?>
 <link rel="stylesheet" href="assets/CSS/catalog.css" />
-<h1>Rekomendasi</h1>
+<!-- <h1>Rekomendasi</h1>
 <div class="catalog" style="margin-bottom: 50px;">
   <?php
     $sql     = "SELECT * FROM tbl_game WHERE kategori_game ='rekomendasi' AND status_game = 1";
@@ -23,8 +23,8 @@ if(isset($_GET['c'])){
   ?>
 </div>
 
-<hr />
-<h1 style="margin-top: 20px">Produk Lainnya</h1>
+<hr /> -->
+<h1 style="margin-top: 20px">Semua Produk</h1>
 <div class="catalog" style="margin-bottom: 50px;">
   <?php
     $sql     = "SELECT * FROM tbl_game WHERE status_game = 1";

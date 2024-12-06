@@ -713,7 +713,7 @@ readers do not read off random characters that represent icons */
   content: "\f458"; }
 
 .fa-quidditch-broom-ball::before {
-  content: "\f458"; }
+  content: "\f458"; } 
 
 .fa-toggle-off::before {
   content: "\f204"; }

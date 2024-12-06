@@ -6,7 +6,7 @@ if(isset($_POST['signIn'])){
     $usn = $_POST['username'];
     $pass = $_POST['password'];
     $pass = md5($pass,false);
-    $q1 = mysqli_query($mysqli, "SELECT * FROM tbl_pengguna WHERE nama_pengguna='$usn' and password_pengguna='$pass'");
+    $q1 = mysqli_query($mysqli, "SELECT * FROM tbl_pengguna WHERE nama_pengguna='$usn' AND password_pengguna='$pass' AND akun_tamu=0");
     if(mysqli_num_rows($q1)==0){
         $error_msg="Username atau password salah!!";
     }else{

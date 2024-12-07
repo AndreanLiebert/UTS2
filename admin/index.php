@@ -136,8 +136,8 @@
                              <i class="fas fa-person fa-7x text-black-50"></i>
                            </div>
                            <div class="col-6 text-white">
-                              <h3 class="fs-3">Pengguna</h3>
-                              <p class="fs-4"><?php echo $jumPengguna ?> Pengguna</p>
+                              <h3 class="fs-3">Pelanggan</h3>
+                              <p class="fs-4"><?php echo $jumPengguna ?> Pelanggan</p>
                               <p><a href="user.php" class="text-white no-decoration">Lihat Detail</a></p> 
                            </div>
                         </div>

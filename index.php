@@ -88,11 +88,10 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="footer">
-      <p>Copyleft &copy;TopupZone 2024</p>
+      <p>Copyright &copy;TopupZone 2024</p>
     </div>
     <script src="assets/JS/aksi.js"></script>
     <script>

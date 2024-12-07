@@ -64,7 +64,7 @@ $jItem = mysqli_num_rows($qItem);
              <a href="index.php"><i class="fas fa-home"></i> Home </a>
          </li>
          <li class="breadcrumb-item active" aria-current="page">
-             <i class="fas fa-align-justify"></i> Pengguna
+             <i class="fas fa-align-justify"></i> Pelanggan
          </li>
      </ol>
      </nav> 
@@ -76,7 +76,7 @@ $jItem = mysqli_num_rows($qItem);
       </div>
 
      <div class="mt-3">
-        <h2>List Pengguna</h2>
+        <h2>List Pelanggan</h2>
 
         <div class="table-responsive">
             <table class="table">

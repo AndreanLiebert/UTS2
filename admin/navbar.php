@@ -12,16 +12,19 @@
           <a class="nav-link" href="game.php">Game</a>
         </li>
         <li class="nav-item me-4">
+          <a class="nav-link" href="item.php">Barang</a>
+        </li>
+        <li class="nav-item me-4">
           <a class="nav-link" href="product.php">Produk</a>
         </li>
         <li class="nav-item me-4">
-          <a class="nav-link" href="item.php">Barang</a>
+          <a class="nav-link" href="payment.php">Pembayaran</a>
         </li>
         <li class="nav-item me-4">
           <a class="nav-link" href="transaction.php">Transaksi</a>
         </li>
         <li class="nav-item me-4">
-          <a class="nav-link" href="user.php">Pengguna</a>
+          <a class="nav-link" href="user.php">Pelanggan</a>
         </li>
         <li class="nav-item me-4">
           <a class="nav-link" href="logout.php">Logout</a>

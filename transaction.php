@@ -116,7 +116,7 @@
             <script>
               setTimeout(()=>{
                 window.location.href = "index.php?page=account";
-              },3000);
+              },20000);
             </script>
             <?php
           }else{

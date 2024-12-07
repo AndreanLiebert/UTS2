@@ -142,8 +142,12 @@ $jItem = mysqli_num_rows($qItem);
                             $idp = $data['data_player'];
                             $idpdc = $data['id_produk'];
                             $qName = mysqli_query($mysqli, "SELECT nama_pengguna FROM tbl_pengguna WHERE id_pengguna='$idg'");
-                            
-                            $gname = mysqli_fetch_array($qName)["nama_pengguna"];
+                            $gname;
+                            if(mysqli_num_rows($qName)==0){
+                                $gname = "Akun dihapus";
+                            }else{
+                                $gname = mysqli_fetch_array($qName)["nama_pengguna"];
+                            }
                             $qpdc = mysqli_query($mysqli, "SELECT * FROM tbl_produk WHERE id_produk='$idpdc'");
                             $iname;
                             $icount;
